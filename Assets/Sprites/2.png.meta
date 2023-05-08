@@ -1328,6 +1328,69 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: 2_56
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 8
+        width: 54
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63221c9071617424591dc9ab5f9d52bf
+      internalID: -910576779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2_57
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 40
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80f9a53898371a9419bb688c6fe09251
+      internalID: 1557383610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2_58
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 38
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 628002c2c11834b42a7990a9267c5341
+      internalID: -314426454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -1365,7 +1428,9 @@ TextureImporter:
       2_15: -1155272481
       2_43: -1197270446
       2_0: 773335950
+      2_59: -1239462078
       2_9: 1705821130
+      2_57: 1557383610
       2_1: -1499654687
       2_41: 1886848739
       2_19: 1797505556
@@ -1376,6 +1441,7 @@ TextureImporter:
       2_20: -176461626
       2_35: 367228592
       2_6: -357393348
+      2_56: -910576779
       2_28: 582760995
       2_49: -101884222
       2_53: 451527312
@@ -1388,6 +1454,7 @@ TextureImporter:
       2_26: 987549645
       2_48: -1227027036
       2_2: 85699531
+      2_58: -314426454
       2_46: -1572368026
       2_40: -1638896517
       2_45: -900853799
