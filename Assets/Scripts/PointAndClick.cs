@@ -9,6 +9,7 @@ public class PointAndClick : MonoBehaviour
 
     public void PickUpItem(int id)
     {
+        //puts item in the slot
         bool result = inventoryManager.AddItem(itemsToPickUp[id]);
         if (result == true)
         {
@@ -21,6 +22,7 @@ public class PointAndClick : MonoBehaviour
     }
 
     public void GetSelectedItem()
+        //finds items in slot
     {
         Item receivedItem = inventoryManager.GetSelectedItem(false);
         if (receivedItem != null)
@@ -35,6 +37,7 @@ public class PointAndClick : MonoBehaviour
 
     public void UseSelectedItem()
     {
+        //item in slot is used
         Item receivedItem = inventoryManager.GetSelectedItem(true);
         if (receivedItem != null)
         {

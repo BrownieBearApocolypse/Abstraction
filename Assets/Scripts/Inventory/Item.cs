@@ -6,6 +6,7 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Scriptable object/Item")]
 public class Item : ScriptableObject
 {
+    //creates the items for the inventory
     [Header("Only Gameplay")]
     public ItemType itemType;
     public ActionType actionType;
@@ -18,7 +19,7 @@ public class Item : ScriptableObject
     public Sprite image;
 
 }
-
+// fuck if i know how to explain, its enums, they make the new special bit things
 public enum ItemType
 {
     Shard,

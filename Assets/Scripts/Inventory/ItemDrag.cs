@@ -16,6 +16,7 @@ public class ItemDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
       
     public void InitialiseItem(Item newItem)
     {
+        //make new item
         item = newItem;
         image.sprite = newItem.image;
         RefreshCount();
@@ -23,6 +24,7 @@ public class ItemDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
 
     public void RefreshCount()
     {
+        //update text number
         countText.text = count.ToString();
         bool textActive = count > 1;
         countText.gameObject.SetActive(textActive);
@@ -30,6 +32,7 @@ public class ItemDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
 
    public void OnBeginDrag(PointerEventData eventData)
    {
+        //starts the drag on mouse click
         parentAfterDrag = transform.parent;
         transform.SetParent(transform.root);
         transform.SetAsLastSibling();
@@ -38,11 +41,13 @@ public class ItemDrag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
 
     public void OnDrag(PointerEventData eventData)
     {
+        //continues the drag
         transform.position = Input.mousePosition;
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
+        //ends the drag
         transform.SetParent(parentAfterDrag);
         image.raycastTarget = true;
     }
