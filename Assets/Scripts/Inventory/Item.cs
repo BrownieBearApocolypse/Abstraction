@@ -2,17 +2,37 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Item : MonoBehaviour
-{
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+[CreateAssetMenu(menuName = "Scriptable object/Item")]
+public class Item : ScriptableObject
+{
+    [Header("Only Gameplay")]
+    public ItemType itemType;
+    public ActionType actionType;
+    public Vector3Int range = new Vector3Int(5, 4, 3);
+
+    [Header("Only UI")]
+    public bool stackable = true;
+
+    [Header("Both")]
+    public Sprite image;
+
+}
+
+public enum ItemType
+{
+    Shard,
+    Glue,
+    Key,
+    Lever,
+
+}
+
+public enum ActionType
+{
+    Fix,
+    Hit,
+    Cut,
+    Pry,
+    Open
 }
