@@ -22,17 +22,28 @@ public class Item : ScriptableObject
 public enum ItemType
 {
     Shard,
-    Glue,
+    Bowl,
     Key,
     Lever,
-
+    RedHerring,
+    FabricScrap,
+    Drain,
+    Clock,
+    Pot,
+    Scissors,
+    Valve,
 }
 
 public enum ActionType
 {
     Fix,
-    Hit,
-    Cut,
-    Pry,
-    Open
+    Lever,
+    Cut,    
+    Open,
+    Give,
+    Null,
+    Drip,
+    Fill,
+    Kine,
+    Turn,
 }

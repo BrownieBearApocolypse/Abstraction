@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1a661ddeddd531b43b3bedd5fa0c22e5, type: 3}
-  m_Name: Tile Shards
+  m_Name: Key
   m_EditorClassIdentifier: 
-  itemType: 0
-  actionType: 0
+  itemType: 2
+  actionType: 3
   range: {x: 5, y: 4, z: 3}
-  stackable: 1
-  image: {fileID: -2058211235, guid: cf3a397321c6a6b43b536cea248c39e4, type: 3}
+  stackable: 0
+  image: {fileID: 21300000, guid: 5aaaea52bfa3add4a8b5ab014277d409, type: 3}

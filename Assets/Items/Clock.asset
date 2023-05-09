@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1a661ddeddd531b43b3bedd5fa0c22e5, type: 3}
-  m_Name: Tile Shards
+  m_Name: Clock
   m_EditorClassIdentifier: 
-  itemType: 0
-  actionType: 0
+  itemType: 7
+  actionType: 7
   range: {x: 5, y: 4, z: 3}
-  stackable: 1
-  image: {fileID: -2058211235, guid: cf3a397321c6a6b43b536cea248c39e4, type: 3}
+  stackable: 0
+  image: {fileID: -1302423776, guid: 1bf98324e4a983b469fca1b6cc4e0580, type: 3}
