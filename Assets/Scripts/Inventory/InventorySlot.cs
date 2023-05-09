@@ -17,22 +17,13 @@ public class InventorySlot : MonoBehaviour, IDropHandler
 
     }
 
-    /*private void Update()
+    private void Update()
     {
-        if (Input.GetMouseButtonDown(0) && Selected = false)
+        if (Selected = false &&Input.GetMouseButtonDown(0) && !EventSystem.current.IsPointerOverGameObject())
         {
-            RaycastHit raycastHit;
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            if (Physics.Raycast(ray, out raycastHit, 100f))
-            {
-                if (raycastHit.transform != null)
-                {
-                    //Our custom method. 
-                    CurrentClickedGameObject(raycastHit.transform.gameObject);
-                }
-            }
+            inventoryManager.ChangeSelectedSlot();
         }
-    }*/
+    }
 
     public void Select()
     {

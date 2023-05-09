@@ -10,14 +10,10 @@ public class InventoryManager : MonoBehaviour
 
     int selectedSlot = -1;
 
-    void ChangeSelectedSlot(int newValue)
+    public void ChangeSelectedSlot()
     {
-        if (selectedSlot >= 0)
-        {
-            inventorySlots[selectedSlot].Deselect();
-        }     
-        inventorySlots[newValue].Select();
-        selectedSlot = newValue;
+        /*need to say go to next in array int newValue*/
+        
     }    
 
     public bool AddItem(Item item)
@@ -56,5 +52,30 @@ public class InventoryManager : MonoBehaviour
         ItemDrag inventoryItem = newItemGo.GetComponent<ItemDrag>();
         inventoryItem.InitialiseItem(item);
 
+    }
+
+    public Item GetSelectedItem(bool use)
+    {
+        InventorySlot slot = inventorySlots[selectedSlot];
+        ItemDrag itemInSlot = slot.GetComponentInChildren<ItemDrag>();
+        if (itemInSlot != null)
+        {
+            Item item = itemInSlot.item;
+            if (use == true)
+            {
+                itemInSlot.count--;
+                if (itemInSlot.count <= 0)
+                {
+                    Destroy(itemInSlot.gameObject);
+                }
+                else
+                {
+                    itemInSlot.RefreshCount();
+                }
+            }
+            return item;
+        }
+
+        return null;
     }
 }
