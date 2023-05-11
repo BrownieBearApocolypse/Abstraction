@@ -945,7 +945,6 @@ GameObject:
   m_Component:
   - component: {fileID: 339106561}
   - component: {fileID: 339106560}
-  - component: {fileID: 339106559}
   m_Layer: 0
   m_Name: CUPBOADCAM
   m_TagString: cupboardCam
@@ -953,14 +952,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &339106559
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 339106558}
-  m_Enabled: 1
 --- !u!20 &339106560
 Camera:
   m_ObjectHideFlags: 0
@@ -1225,7 +1216,6 @@ GameObject:
   m_Component:
   - component: {fileID: 403509992}
   - component: {fileID: 403509991}
-  - component: {fileID: 403509990}
   m_Layer: 0
   m_Name: TREECAM
   m_TagString: treeCam
@@ -1233,14 +1223,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &403509990
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 403509989}
-  m_Enabled: 1
 --- !u!20 &403509991
 Camera:
   m_ObjectHideFlags: 0
@@ -1687,7 +1669,6 @@ GameObject:
   m_Component:
   - component: {fileID: 508249780}
   - component: {fileID: 508249779}
-  - component: {fileID: 508249778}
   m_Layer: 0
   m_Name: CLOCKCAM
   m_TagString: clockCam
@@ -1695,14 +1676,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &508249778
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 508249777}
-  m_Enabled: 1
 --- !u!20 &508249779
 Camera:
   m_ObjectHideFlags: 0
@@ -3811,7 +3784,6 @@ GameObject:
   m_Component:
   - component: {fileID: 964005644}
   - component: {fileID: 964005643}
-  - component: {fileID: 964005642}
   m_Layer: 0
   m_Name: WALLCAM
   m_TagString: wallCam
@@ -3819,14 +3791,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &964005642
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 964005641}
-  m_Enabled: 1
 --- !u!20 &964005643
 Camera:
   m_ObjectHideFlags: 0
@@ -5411,7 +5375,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1343023114}
   - component: {fileID: 1343023113}
-  - component: {fileID: 1343023112}
   m_Layer: 0
   m_Name: WINDOWCAM
   m_TagString: windowCam
@@ -5419,14 +5382,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &1343023112
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1343023111}
-  m_Enabled: 1
 --- !u!20 &1343023113
 Camera:
   m_ObjectHideFlags: 0
