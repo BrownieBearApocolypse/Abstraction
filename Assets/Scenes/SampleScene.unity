@@ -7597,12 +7597,12 @@ MonoBehaviour:
   windowCam: {fileID: 1343023113}
   wallCam: {fileID: 964005643}
   cupboardCam: {fileID: 339106560}
-  backButton: {fileID: 0}
-  clockButton: {fileID: 0}
-  treeButton: {fileID: 0}
-  windowButton: {fileID: 0}
-  wallButton: {fileID: 0}
-  cupboardButton: {fileID: 0}
+  backButton: {fileID: 1103991911}
+  clockButton: {fileID: 1904606985}
+  treeButton: {fileID: 1882665010}
+  windowButton: {fileID: 565056971}
+  wallButton: {fileID: 1871092342}
+  cupboardButton: {fileID: 947582905}
 --- !u!1 &2006183591
 GameObject:
   m_ObjectHideFlags: 0
