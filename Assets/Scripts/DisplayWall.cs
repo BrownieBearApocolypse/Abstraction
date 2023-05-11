@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
-
+using UnityEngine.UI;
 
 public class DisplayWall : MonoBehaviour
 {
@@ -13,7 +13,14 @@ public class DisplayWall : MonoBehaviour
     public Camera wallCam;
     public Camera cupboardCam;
 
-   public void Start()
+    public Button backButton;
+    public Button clockButton;
+    public Button treeButton;
+    public Button windowButton;
+    public Button wallButton;
+    public Button cupboardButton;
+
+    public void Start()
    {
         mainCam.enabled = true;
         clockCam.enabled = false;
@@ -21,7 +28,14 @@ public class DisplayWall : MonoBehaviour
         windowCam.enabled = false;
         wallCam.enabled = false;
         cupboardCam.enabled = false;
-   }
+
+        cupboardButton.enabled = true;
+        clockButton.enabled = true;
+        treeButton.enabled = true;
+        windowButton.enabled = true;
+        wallButton.enabled = true;
+        backButton.enabled = false;
+    }
 
     public void ClockCam()
     {
@@ -31,6 +45,13 @@ public class DisplayWall : MonoBehaviour
         windowCam.enabled = false;
         wallCam.enabled = false;
         cupboardCam.enabled = false;
+
+        cupboardButton.enabled = false;
+        clockButton.enabled = false;
+        treeButton.enabled = false;
+        windowButton.enabled = false;
+        wallButton.enabled = false;
+        backButton.enabled = true;
     }
 
     public void TreeCam()
@@ -41,6 +62,13 @@ public class DisplayWall : MonoBehaviour
         windowCam.enabled = false;
         wallCam.enabled = false;
         cupboardCam.enabled = false;
+
+        cupboardButton.enabled = false;
+        clockButton.enabled = false;
+        treeButton.enabled = false;
+        windowButton.enabled = false;
+        wallButton.enabled = false;
+        backButton.enabled = true;
     }
 
     public void WindowCam()
@@ -51,6 +79,13 @@ public class DisplayWall : MonoBehaviour
         windowCam.enabled = true;
         wallCam.enabled = false;
         cupboardCam.enabled = false;
+
+        cupboardButton.enabled = false;
+        clockButton.enabled = false;
+        treeButton.enabled = false;
+        windowButton.enabled = false;
+        wallButton.enabled = false;
+        backButton.enabled = true;
     }
 
     public void WallCam()
@@ -61,6 +96,13 @@ public class DisplayWall : MonoBehaviour
         windowCam.enabled = false;
         wallCam.enabled = true;
         cupboardCam.enabled = false;
+
+        cupboardButton.enabled = false;
+        clockButton.enabled = false;
+        treeButton.enabled = false;
+        windowButton.enabled = false;
+        wallButton.enabled = false;
+        backButton.enabled = true;
     }
 
     public void CupboardCam()
@@ -71,6 +113,13 @@ public class DisplayWall : MonoBehaviour
         windowCam.enabled = false;
         wallCam.enabled = false;
         cupboardCam.enabled = true;
+
+        cupboardButton.enabled = false;
+        clockButton.enabled = false;
+        treeButton.enabled = false;
+        windowButton.enabled = false;
+        wallButton.enabled = false;
+        backButton.enabled = true;
     }
 
     public void Back()
@@ -81,5 +130,12 @@ public class DisplayWall : MonoBehaviour
         windowCam.enabled = false;
         wallCam.enabled = false;
         cupboardCam.enabled = false;
+
+        cupboardButton.enabled = true;
+        clockButton.enabled = true;
+        treeButton.enabled = true;
+        windowButton.enabled = true;
+        wallButton.enabled = true;
+        backButton.enabled = false;
     }
 }
