@@ -39,19 +39,6 @@ public class InventoryManager : MonoBehaviour
             }
         }
         return false;
-
-        //find any empty spot
-        for (int i = 0; i < inventorySlots.Length; i++)
-        {
-            InventorySlot slot = inventorySlots[i];
-            ItemDrag itemInSlot = slot.GetComponentInChildren<ItemDrag>();
-            if (itemInSlot == null)
-            {
-                SpawnNewItem(item, slot);
-                return true;
-            }
-        }
-        return false;
     }
 
     public void SpawnNewItem(Item item, InventorySlot slot)
