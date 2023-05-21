@@ -10,15 +10,19 @@ public class DisplayWall : MonoBehaviour
     public Camera clockCam;
     public Camera treeCam;
     public Camera windowCam;
-    public Camera wallCam;
+    public Camera wall1Cam;
     public Camera cupboardCam;
+    public Camera doorCam;
+    public Camera wall2Cam;
 
     public Button backButton;
     public Button clockButton;
     public Button treeButton;
     public Button windowButton;
-    public Button wallButton;
+    public Button wall1Button;
     public Button cupboardButton;
+    public Button doorButton;
+    public Button wall2Button;
 
     public void Start()
    {
@@ -26,15 +30,18 @@ public class DisplayWall : MonoBehaviour
         clockCam.enabled = false;
         treeCam.enabled = false;
         windowCam.enabled = false;
-        wallCam.enabled = false;
+        wall1Cam.enabled = false;
         cupboardCam.enabled = false;
+        doorCam.enabled = false;
+        wall2Cam.enabled = false;
 
         cupboardButton.enabled = true;
         clockButton.enabled = true;
         treeButton.enabled = true;
         windowButton.enabled = true;
-        wallButton.enabled = true;
-        backButton.enabled = false;
+        wall1Button.enabled = true;
+        doorButton.enabled = true;
+        wall2Button.enabled = true;
     }
 
     public void ClockCam()
@@ -43,14 +50,18 @@ public class DisplayWall : MonoBehaviour
         clockCam.enabled = true;
         treeCam.enabled = false;
         windowCam.enabled = false;
-        wallCam.enabled = false;
+        wall1Cam.enabled = false;
         cupboardCam.enabled = false;
+        doorCam.enabled = false;
+        wall2Cam.enabled = false;
 
         cupboardButton.enabled = false;
         clockButton.enabled = false;
         treeButton.enabled = false;
         windowButton.enabled = false;
-        wallButton.enabled = false;
+        wall1Button.enabled = false;
+        doorButton.enabled = false;
+        wall2Button.enabled = false;
         backButton.enabled = true;
     }
 
@@ -60,14 +71,18 @@ public class DisplayWall : MonoBehaviour
         clockCam.enabled = false;
         treeCam.enabled = true;
         windowCam.enabled = false;
-        wallCam.enabled = false;
+        wall1Cam.enabled = false;
         cupboardCam.enabled = false;
+        doorCam.enabled = false;
+        wall2Cam.enabled = false;
 
         cupboardButton.enabled = false;
         clockButton.enabled = false;
         treeButton.enabled = false;
         windowButton.enabled = false;
-        wallButton.enabled = false;
+        wall1Button.enabled = false;
+        doorButton.enabled = false;
+        wall2Button.enabled = false;
         backButton.enabled = true;
     }
 
@@ -77,31 +92,39 @@ public class DisplayWall : MonoBehaviour
         clockCam.enabled = false;
         treeCam.enabled = false;
         windowCam.enabled = true;
-        wallCam.enabled = false;
+        wall1Cam.enabled = false;
         cupboardCam.enabled = false;
+        doorCam.enabled = false;
+        wall2Cam.enabled = false;
 
         cupboardButton.enabled = false;
         clockButton.enabled = false;
         treeButton.enabled = false;
         windowButton.enabled = false;
-        wallButton.enabled = false;
+        wall1Button.enabled = false;
+        doorButton.enabled = false;
+        wall2Button.enabled = false;
         backButton.enabled = true;
     }
 
-    public void WallCam()
+    public void Wall1Cam()
     {
         mainCam.enabled = false;
         clockCam.enabled = false;
         treeCam.enabled = false;
         windowCam.enabled = false;
-        wallCam.enabled = true;
+        wall1Cam.enabled = true;
         cupboardCam.enabled = false;
+        doorCam.enabled = false;
+        wall2Cam.enabled = false;
 
         cupboardButton.enabled = false;
         clockButton.enabled = false;
         treeButton.enabled = false;
         windowButton.enabled = false;
-        wallButton.enabled = false;
+        wall1Button.enabled = false;
+        doorButton.enabled = false;
+        wall2Button.enabled = false;
         backButton.enabled = true;
     }
 
@@ -111,15 +134,59 @@ public class DisplayWall : MonoBehaviour
         clockCam.enabled = false;
         treeCam.enabled = false;
         windowCam.enabled = false;
-        wallCam.enabled = false;
+        wall1Cam.enabled = false;
         cupboardCam.enabled = true;
+        doorCam.enabled = false;
+        wall2Cam.enabled = false;
 
         cupboardButton.enabled = false;
         clockButton.enabled = false;
         treeButton.enabled = false;
         windowButton.enabled = false;
-        wallButton.enabled = false;
+        wall1Button.enabled = false;
+        doorButton.enabled = false;
+        wall2Button.enabled = false;
         backButton.enabled = true;
+    }
+
+    public void DoorCam()
+    {
+        mainCam.enabled = false;
+        clockCam.enabled = false;
+        treeCam.enabled = false;
+        windowCam.enabled = false;
+        wall1Cam.enabled = false;
+        cupboardCam.enabled = false;
+        doorCam.enabled = true;
+        wall2Cam.enabled = false;
+
+        cupboardButton.enabled = true;
+        clockButton.enabled = true;
+        treeButton.enabled = true;
+        windowButton.enabled = true;
+        wall1Button.enabled = true;
+        doorButton.enabled = false;
+        wall2Button.enabled = false;
+    }
+
+    public void Wall2Cam()
+    {
+        mainCam.enabled = false;
+        clockCam.enabled = false;
+        treeCam.enabled = false;
+        windowCam.enabled = false;
+        wall1Cam.enabled = false;
+        cupboardCam.enabled = false;
+        doorCam.enabled = false;
+        wall2Cam.enabled = true;
+
+        cupboardButton.enabled = true;
+        clockButton.enabled = true;
+        treeButton.enabled = true;
+        windowButton.enabled = true;
+        wall1Button.enabled = true;
+        doorButton.enabled = false;
+        wall2Button.enabled = false;
     }
 
     public void Back()
@@ -128,14 +195,17 @@ public class DisplayWall : MonoBehaviour
         clockCam.enabled = false;
         treeCam.enabled = false;
         windowCam.enabled = false;
-        wallCam.enabled = false;
+        wall1Cam.enabled = false;
         cupboardCam.enabled = false;
+        doorCam.enabled = false;
+        wall2Cam.enabled = false;
 
         cupboardButton.enabled = true;
         clockButton.enabled = true;
         treeButton.enabled = true;
         windowButton.enabled = true;
-        wallButton.enabled = true;
-        backButton.enabled = false;
+        wall1Button.enabled = true;
+        doorButton.enabled = false;
+        wall2Button.enabled = false;      
     }
 }

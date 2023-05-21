@@ -10,6 +10,7 @@ TagManager:
   - wallCam
   - cupboardCam
   - Item
+  - doorCam
   layers:
   - Default
   - TransparentFX
