@@ -24,7 +24,7 @@ public class InventoryManager : MonoBehaviour
         
     }    
 
-    public bool AddItem(Item item)
+    public void AddItem(Item item)
     {
         //track number of items
         for (int i = 0; i < inventorySlots.Length; i++)
@@ -34,22 +34,9 @@ public class InventoryManager : MonoBehaviour
             if (itemInSlot != null && itemInSlot.item == item && itemInSlot.count < 15 && itemInSlot.item.stackable == true)
             {
                 SpawnNewItem(item, slot);
-                return true;
+                return;
             }
-        }
-        return false;
-
-        //find any empty spot
-        foreach (InventorySlot slot in inventorySlots)
-        {
-            ItemDrag itemInSlot = slot.GetComponentInChildren<ItemDrag>();
-            if (itemInSlot == null)
-            {
-                SpawnNewItem(item, slot);
-                return true;
-            }
-        }
-        return false;
+        }       
     }
 
     public void SpawnNewItem(Item item, InventorySlot slot)

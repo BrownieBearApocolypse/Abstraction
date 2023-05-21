@@ -2,12 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ItemTest : MonoBehaviour
+public class PointAndClick : MonoBehaviour
 {
-    public InventoryManager inventoryManager;
+    public ItemGrab itemGrab;
 
     public void OnMouseDown()
     {
-        inventoryManager.AddItem();
+        ItemGrab.PickUpItem();
     }
 }
