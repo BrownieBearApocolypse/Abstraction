@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &4227725414052284658
+--- !u!1 &6031657300182382349
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,11 +8,10 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4227725414052284656}
-  - component: {fileID: 4227725414052284659}
-  - component: {fileID: 4227725414052284662}
-  - component: {fileID: 4227725414052284657}
-  - component: {fileID: 4222036488788119010}
+  - component: {fileID: 6031657300182382351}
+  - component: {fileID: 6031657300182382348}
+  - component: {fileID: 6019213012253897245}
+  - component: {fileID: 4883876069459815375}
   m_Layer: 0
   m_Name: script holder
   m_TagString: Untagged
@@ -20,13 +19,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4227725414052284656
+--- !u!4 &6031657300182382351
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4227725414052284658}
+  m_GameObject: {fileID: 6031657300182382349}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.46222132, y: 5.394952, z: -0.32165763}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -35,36 +34,37 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4227725414052284659
+--- !u!114 &6031657300182382348
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4227725414052284658}
+  m_GameObject: {fileID: 6031657300182382349}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e91ff109b4ad9c14d89fb4cabcf9e056, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxStackedItems: 15
-  itemPrefab: {fileID: 8899417160657458634, guid: 92e404e30fb416a4195432299c1bda90, type: 3}
-  inventorySlots:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
---- !u!114 &4227725414052284662
+--- !u!114 &6019213012253897245
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4227725414052284658}
+  m_GameObject: {fileID: 6031657300182382349}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27d4642932d7219428da02ec94a0465a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &4883876069459815375
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6031657300182382349}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f902492e46b16114db17b8bf3a664c79, type: 3}
@@ -74,37 +74,15 @@ MonoBehaviour:
   clockCam: {fileID: 0}
   treeCam: {fileID: 0}
   windowCam: {fileID: 0}
-  wallCam: {fileID: 0}
+  wall1Cam: {fileID: 0}
   cupboardCam: {fileID: 0}
+  doorCam: {fileID: 0}
+  wall2Cam: {fileID: 0}
   backButton: {fileID: 0}
   clockButton: {fileID: 0}
   treeButton: {fileID: 0}
   windowButton: {fileID: 0}
-  wallButton: {fileID: 0}
+  wall1Button: {fileID: 0}
   cupboardButton: {fileID: 0}
---- !u!114 &4227725414052284657
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4227725414052284658}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 93b43cf31cc2fb640bbe767568ac3141, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inventoryManager: {fileID: 4227725414052284659}
-  itemsToPickUp: []
---- !u!114 &4222036488788119010
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4227725414052284658}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 27d4642932d7219428da02ec94a0465a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  doorButton: {fileID: 0}
+  wall2Button: {fileID: 0}

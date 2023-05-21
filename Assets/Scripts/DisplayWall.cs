@@ -6,14 +6,14 @@ using UnityEngine.UI;
 
 public class DisplayWall : MonoBehaviour
 {
-    public Camera mainCam;
-    public Camera clockCam;
-    public Camera treeCam;
-    public Camera windowCam;
-    public Camera wall1Cam;
-    public Camera cupboardCam;
-    public Camera doorCam;
-    public Camera wall2Cam;
+    public GameObject main;
+    public GameObject clock;
+    public GameObject tree;
+    public GameObject window;
+    public GameObject wall1;
+    public GameObject cupboard;
+    public GameObject door;
+    public GameObject wall2;
 
     public Button backButton;
     public Button clockButton;
@@ -25,15 +25,15 @@ public class DisplayWall : MonoBehaviour
     public Button wall2Button;
 
     public void Start()
-   {
-        mainCam.enabled = true;
-        clockCam.enabled = false;
-        treeCam.enabled = false;
-        windowCam.enabled = false;
-        wall1Cam.enabled = false;
-        cupboardCam.enabled = false;
-        doorCam.enabled = false;
-        wall2Cam.enabled = false;
+    {
+        main.SetActive(true);
+        clock.SetActive(false);
+        cupboard.SetActive(false);
+        tree.SetActive(false);
+        wall1.SetActive(false);
+        wall2.SetActive(false);
+        door.SetActive(false);
+        window.SetActive(false);
 
         cupboardButton.enabled = true;
         clockButton.enabled = true;
@@ -46,14 +46,15 @@ public class DisplayWall : MonoBehaviour
 
     public void ClockCam()
     {
-        mainCam.enabled = false;
-        clockCam.enabled = true;
-        treeCam.enabled = false;
-        windowCam.enabled = false;
-        wall1Cam.enabled = false;
-        cupboardCam.enabled = false;
-        doorCam.enabled = false;
-        wall2Cam.enabled = false;
+        main.SetActive(false);
+        clock.SetActive(true);
+        cupboard.SetActive(false);
+        tree.SetActive(false);
+        wall1.SetActive(false);
+        wall2.SetActive(false);
+        door.SetActive(false);
+        window.SetActive(false);
+
 
         cupboardButton.enabled = false;
         clockButton.enabled = false;
@@ -67,14 +68,15 @@ public class DisplayWall : MonoBehaviour
 
     public void TreeCam()
     {
-        mainCam.enabled = false;
-        clockCam.enabled = false;
-        treeCam.enabled = true;
-        windowCam.enabled = false;
-        wall1Cam.enabled = false;
-        cupboardCam.enabled = false;
-        doorCam.enabled = false;
-        wall2Cam.enabled = false;
+        main.SetActive(false);
+        clock.SetActive(false);
+        cupboard.SetActive(false);
+        tree.SetActive(true);
+        wall1.SetActive(false);
+        wall2.SetActive(false);
+        door.SetActive(false);
+        window.SetActive(false);
+
 
         cupboardButton.enabled = false;
         clockButton.enabled = false;
@@ -88,14 +90,15 @@ public class DisplayWall : MonoBehaviour
 
     public void WindowCam()
     {
-        mainCam.enabled = false;
-        clockCam.enabled = false;
-        treeCam.enabled = false;
-        windowCam.enabled = true;
-        wall1Cam.enabled = false;
-        cupboardCam.enabled = false;
-        doorCam.enabled = false;
-        wall2Cam.enabled = false;
+        main.SetActive(false);
+        clock.SetActive(false);
+        cupboard.SetActive(false);
+        tree.SetActive(false);
+        wall1.SetActive(false);
+        wall2.SetActive(false);
+        door.SetActive(false);
+        window.SetActive(true);
+
 
         cupboardButton.enabled = false;
         clockButton.enabled = false;
@@ -109,14 +112,15 @@ public class DisplayWall : MonoBehaviour
 
     public void Wall1Cam()
     {
-        mainCam.enabled = false;
-        clockCam.enabled = false;
-        treeCam.enabled = false;
-        windowCam.enabled = false;
-        wall1Cam.enabled = true;
-        cupboardCam.enabled = false;
-        doorCam.enabled = false;
-        wall2Cam.enabled = false;
+        main.SetActive(false);
+        clock.SetActive(false);
+        cupboard.SetActive(false);
+        tree.SetActive(false);
+        wall1.SetActive(true);
+        wall2.SetActive(false);
+        door.SetActive(false);
+        window.SetActive(false);
+
 
         cupboardButton.enabled = false;
         clockButton.enabled = false;
@@ -130,14 +134,15 @@ public class DisplayWall : MonoBehaviour
 
     public void CupboardCam()
     {
-        mainCam.enabled = false;
-        clockCam.enabled = false;
-        treeCam.enabled = false;
-        windowCam.enabled = false;
-        wall1Cam.enabled = false;
-        cupboardCam.enabled = true;
-        doorCam.enabled = false;
-        wall2Cam.enabled = false;
+        main.SetActive(false);
+        clock.SetActive(false);
+        cupboard.SetActive(true);
+        tree.SetActive(false);
+        wall1.SetActive(false);
+        wall2.SetActive(false);
+        door.SetActive(false);
+        window.SetActive(false);
+
 
         cupboardButton.enabled = false;
         clockButton.enabled = false;
@@ -151,14 +156,15 @@ public class DisplayWall : MonoBehaviour
 
     public void DoorCam()
     {
-        mainCam.enabled = false;
-        clockCam.enabled = false;
-        treeCam.enabled = false;
-        windowCam.enabled = false;
-        wall1Cam.enabled = false;
-        cupboardCam.enabled = false;
-        doorCam.enabled = true;
-        wall2Cam.enabled = false;
+        main.SetActive(false);
+        clock.SetActive(false);
+        cupboard.SetActive(false);
+        tree.SetActive(false);
+        wall1.SetActive(false);
+        wall2.SetActive(false);
+        door.SetActive(true);
+        window.SetActive(false);
+
 
         cupboardButton.enabled = true;
         clockButton.enabled = true;
@@ -171,14 +177,15 @@ public class DisplayWall : MonoBehaviour
 
     public void Wall2Cam()
     {
-        mainCam.enabled = false;
-        clockCam.enabled = false;
-        treeCam.enabled = false;
-        windowCam.enabled = false;
-        wall1Cam.enabled = false;
-        cupboardCam.enabled = false;
-        doorCam.enabled = false;
-        wall2Cam.enabled = true;
+        main.SetActive(false);
+        clock.SetActive(false);
+        cupboard.SetActive(false);
+        tree.SetActive(false);
+        wall1.SetActive(false);
+        wall2.SetActive(true);
+        door.SetActive(false);
+        window.SetActive(false);
+
 
         cupboardButton.enabled = true;
         clockButton.enabled = true;
@@ -191,14 +198,15 @@ public class DisplayWall : MonoBehaviour
 
     public void Back()
     {
-        mainCam.enabled = true;
-        clockCam.enabled = false;
-        treeCam.enabled = false;
-        windowCam.enabled = false;
-        wall1Cam.enabled = false;
-        cupboardCam.enabled = false;
-        doorCam.enabled = false;
-        wall2Cam.enabled = false;
+        main.SetActive(true);
+        clock.SetActive(false);
+        cupboard.SetActive(false);
+        tree.SetActive(false);
+        wall1.SetActive(false);
+        wall2.SetActive(false);
+        door.SetActive(false);
+        window.SetActive(false);
+
 
         cupboardButton.enabled = true;
         clockButton.enabled = true;

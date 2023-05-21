@@ -2,12 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PointAndClick : MonoBehaviour
+public class PointAndClick : MonoBehaviour//, IInteractable
 {
-    public ItemGrab itemGrab;
+   void Update()
+   {
+        if(Input.GetMouseButtonDown(0))
+        {
+            /*Vector3 rayPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            RaycastHit hit = Physics.Raycast(rayPosition, Vector3.zero, 100);
 
-    public void OnMouseDown()
-    {
-        ItemGrab.PickUpItem();
-    }
+            if(hit && hit.transform.tag == "Item")
+            {
+                hit.transform.GetComponent<IInteractable>().Interact();
+            }*/
+        }
+   }
 }
