@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-[CreateAssetMenu(menuName = "Scriptable object/Item")]
 public class Item : ScriptableObject
 {
     //creates the items for the inventory

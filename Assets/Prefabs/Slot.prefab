@@ -90,6 +90,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44e6063700c4c85428b845a7b8ee2c8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  image: {fileID: 0}
+  selectedColour: {r: 0, g: 0, b: 0, a: 0}
+  notSelectedColour: {r: 0, g: 0, b: 0, a: 0}
+  Selected: 0
+  inventoryManager: {fileID: 4227725414052284659, guid: d7bd422a20044d146a1d0a7dd98561df, type: 3}
 --- !u!114 &375041976972289801
 MonoBehaviour:
   m_ObjectHideFlags: 0
