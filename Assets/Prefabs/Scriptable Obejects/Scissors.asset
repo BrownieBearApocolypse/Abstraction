@@ -15,5 +15,5 @@ MonoBehaviour:
   itemType: 9
   actionType: 2
   range: {x: 5, y: 4, z: 3}
-  stackable: 1
+  stackable: 0
   image: {fileID: 0}
