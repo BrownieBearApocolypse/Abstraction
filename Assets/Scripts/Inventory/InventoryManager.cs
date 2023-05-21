@@ -32,9 +32,8 @@ public class InventoryManager : MonoBehaviour
             InventorySlot slot = inventorySlots[i];
             ItemDrag itemInSlot = slot.GetComponentInChildren<ItemDrag>();
             if (itemInSlot != null && itemInSlot.item == item && itemInSlot.count < 15 && itemInSlot.item.stackable == true)
-            {                
-                itemInSlot.count++;
-                itemInSlot.RefreshCount();
+            {
+                SpawnNewItem(item, slot);
                 return true;
             }
         }
@@ -55,7 +54,7 @@ public class InventoryManager : MonoBehaviour
 
     public void SpawnNewItem(Item item, InventorySlot slot)
     {
-        //out item in slot
+        //put item in slot
         GameObject newItemGo = Instantiate(itemPrefab, slot.transform);
         ItemDrag inventoryItem = newItemGo.GetComponent<ItemDrag>();
         inventoryItem.InitialiseItem(item);
