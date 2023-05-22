@@ -4,18 +4,19 @@ using UnityEngine;
 
 public class DisplayImage : MonoBehaviour
 {
-    public GameObject[] wall;
-
     public enum State
     {
-        normal, zoom
-    }
+        normal, zoom, ChangedView
+    };
 
     public State CurrentState { get; set; }
 
     public int CurrentWall
     {
-        get { return currentWall; }
+        get
+        {    
+            return currentWall; 
+        }
         set
         {
             if (value == 5)
@@ -31,23 +32,20 @@ public class DisplayImage : MonoBehaviour
     private int previousWall;
 
     void Start()
-    {
-        wall = GameObject.FindGameObjectsWithTag("Screen");
+    {        
         previousWall = 0;
         currentWall = 1;
     }
 
     void Update()
-    {
-        for (int i = 0; i < wall.Length; i++)
+    {       
+        if (currentWall != previousWall)
         {
-            if (currentWall != previousWall)
-            {
-                wall[i].SetActive(false);
-            }            
-        } 
+            GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/Wall" + currentWall.ToString());
+        }           
+       
         previousWall = currentWall;
-
-    }   
+    }
 
 }
+

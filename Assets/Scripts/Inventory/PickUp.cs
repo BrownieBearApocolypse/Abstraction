@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class PickUp : MonoBehaviour
 {
+    //goes on item
     public string DisplaySprite;
 
     private GameObject InventorySlots;

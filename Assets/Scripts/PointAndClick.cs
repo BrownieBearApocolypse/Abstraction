@@ -8,7 +8,7 @@ public class PointAndClick : MonoBehaviour
 
     void Start()
     {
-        currentDisplay = GameObject.Find("MAIN");
+        currentDisplay = GameObject.Find("displayImage").GetComponent<DisplayImage>();
     }
 
     void Update()
@@ -16,7 +16,7 @@ public class PointAndClick : MonoBehaviour
         if(Input.GetMouseButtonDown(0))
         {
             Vector3 rayPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            RaycastHit hit = Physics.Raycast(rayPosition, Vector3.zero, 100);
+            RaycastHit2D hit = Physics2D.Raycast(rayPosition, Vector3.zero, 100);
 
             if(hit && hit.transform.tag == "Interactable")
             {

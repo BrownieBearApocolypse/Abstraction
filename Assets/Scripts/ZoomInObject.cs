@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ZoomInObject : MonoBehaviour, IInteractable
 {
+    //goes on zoom object
     public float ZoomRatio = 0.5f;
     //set object this is attached to to Ignore Raycast
     public void Interact(DisplayImage currentDisplay)

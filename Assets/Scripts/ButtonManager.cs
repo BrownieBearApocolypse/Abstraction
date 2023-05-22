@@ -8,73 +8,62 @@ public class ButtonManager : MonoBehaviour
 {
     private DisplayImage currentDisplay;
 
+    public Button[] buttons;
+
     private float initialCameraSize;
     private Vector3 initialCameraPosition;
     
     void Start()
     {
-      currentDisplay = GameObject.Find("MAIN");
+        currentDisplay = GameObject.Find("displayImage").GetComponent<DisplayImage>();
         initialCameraSize = Camera.main.orthographicSize;
         initialCameraPosition = Camera.main.transform.position;
     }
 
-    public void OnClickZoomReturn()
+    public void OnDoorClick()
     {
-        GameObject.Find("script holder").GetComponent<DisplayImage>.CurrentState = DisplayImage.State.normal;
-        var zoomInObjects = FindObjectsOfType<ZoomInObject>();
-        foreach(var zoomInObject in zoomInObjects)
-        {
-            zoomInObject.gameObject.layer = 0;
-        }
+        currentDisplay.CurrentWall = currentDisplay.CurrentWall + 1;
+    }
 
-        Camera.main.orthographicSize = initialCameraSize;
-        Camera.main.transform.position = initialCameraPosition;
+    public void OnCurtainClick()
+    {
+        currentDisplay.CurrentWall = currentDisplay.CurrentWall + 2;
+    }
+
+    public void OnWindowClick()
+    {
+        currentDisplay.CurrentWall = currentDisplay.CurrentWall + 3;
+    }
+
+    public void OnTreeClick()
+    {
+        currentDisplay.CurrentWall = currentDisplay.CurrentWall + 4;
+    }
+
+    public void OnClickReturn()
+    {
+        if (currentDisplay.CurrentState == DisplayImage.State.zoom)
+        {
+            GameObject.Find("displayImage").GetComponent<DisplayImage>().CurrentState = DisplayImage.State.normal;
+            var zoomInObjects = FindObjectsOfType<ZoomInObject>();
+            foreach(var zoomInObject in zoomInObjects)
+            {
+                zoomInObject.gameObject.layer = 0;
+            }
+
+            Camera.main.orthographicSize = initialCameraSize;
+            Camera.main.transform.position = initialCameraPosition; 
+        }
+        else
+        {
+            currentDisplay.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/Wall" + currentDisplay.CurrentWall);
+            currentDisplay.CurrentState = DisplayImage.State.normal;
+            foreach (Button button in buttons)
+            {
+            GetComponent<ButtonBehaviour>().enabled = true;
+            }
+        }       
+        
     }
     
-    //this top bit needs to become (when click here (raycast), swap to the correct screen
-    public void ClockCam()
-    {
-      //currentDisplay.CurrentWall = GameObject.Find("CLOCK").SetActive(true);
-    }
-
-    public void TreeCam()
-    {
-      //currentDisplay.CurrentWall = GameObject.Find("TREE").SetActive(true);
-    }
-
-    public void WindowCam()
-    {
-      //currentDisplay.CurrentWall = GameObject.Find("WINDOW").SetActive(true);
-    }
-
-    public void Wall1Cam()
-    {
-      //currentDisplay.CurrentWall = GameObject.Find("WALL1").SetActive(true);
-    }
-
-    public void CupboardCam()
-    {
-      //currentDisplay.CurrentWall = GameObject.Find("CUPBOARD").SetActive(true);
-    }
-
-    public void DoorCam()
-    {
-      //currentDisplay.CurrentWall = GameObject.Find("DOOR").SetActive(true);
-    }
-
-    public void Wall2Cam()
-    {
-      //currentDisplay.CurrentWall = GameObject.Find("WALL2").SetActive(true);
-    }
-
-   /* public void Back()
-    {
-        cupboardButton.enabled = true;
-        clockButton.enabled = true;
-        treeButton.enabled = true;
-        windowButton.enabled = true;
-        wall1Button.enabled = true;
-        doorButton.enabled = true;
-        wall2Button.enabled = true;      
-    }*/
 }

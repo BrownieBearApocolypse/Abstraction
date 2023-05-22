@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6031657300182382348}
   - component: {fileID: 6019213012253897245}
   - component: {fileID: 4883876069459815375}
+  - component: {fileID: 6271125972005126858}
   m_Layer: 0
   m_Name: script holder
   m_TagString: Untagged
@@ -70,19 +71,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f902492e46b16114db17b8bf3a664c79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainCam: {fileID: 0}
-  clockCam: {fileID: 0}
-  treeCam: {fileID: 0}
-  windowCam: {fileID: 0}
-  wall1Cam: {fileID: 0}
-  cupboardCam: {fileID: 0}
-  doorCam: {fileID: 0}
-  wall2Cam: {fileID: 0}
-  backButton: {fileID: 0}
-  clockButton: {fileID: 0}
-  treeButton: {fileID: 0}
-  windowButton: {fileID: 0}
-  wall1Button: {fileID: 0}
-  cupboardButton: {fileID: 0}
-  doorButton: {fileID: 0}
-  wall2Button: {fileID: 0}
+  buttons: []
+--- !u!114 &6271125972005126858
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6031657300182382349}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7b7135b74f77cf49a87dc7f19bab699, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
