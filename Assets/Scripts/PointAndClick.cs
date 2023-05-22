@@ -2,9 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PointAndClick : MonoBehaviour, IInteractable
+public class PointAndClick : MonoBehaviour
 {
-   void Update()
+   private DisplayImage currentDisplay;
+
+    void Start()
+    {
+        currentDisplay = GameObject.Find("MAIN");
+    }
+
+    void Update()
    {
         if(Input.GetMouseButtonDown(0))
         {
@@ -13,7 +20,7 @@ public class PointAndClick : MonoBehaviour, IInteractable
 
             if(hit && hit.transform.tag == "Interactable")
             {
-                hit.transform.GetComponent<IInteractable>().Interact(DisplayImage, currentDisplay);
+                hit.transform.GetComponent<IInteractable>().Interact(currentDisplay);
             }
         }
    }

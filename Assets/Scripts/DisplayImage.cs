@@ -4,8 +4,14 @@ using UnityEngine;
 
 public class DisplayImage : MonoBehaviour
 {
-    public GameObject[] Wall;
+    public GameObject[] wall;
 
+    public enum State
+    {
+        normal, zoom
+    }
+
+    public State CurrentState { get; set; }
 
     public int CurrentWall
     {
@@ -26,7 +32,7 @@ public class DisplayImage : MonoBehaviour
 
     void Start()
     {
-        Wall = GameObject.FindGameObjectsWIthTag("Screen");
+        wall = GameObject.FindGameObjectsWithTag("Screen");
         previousWall = 0;
         currentWall = 1;
     }
@@ -42,6 +48,6 @@ public class DisplayImage : MonoBehaviour
         } 
         previousWall = currentWall;
 
-    }           
-    
+    }   
+
 }
