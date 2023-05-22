@@ -4,13 +4,9 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - clockCam
-  - treeCam
-  - windowCam
-  - wallCam
-  - cupboardCam
   - Item
-  - doorCam
+  - Interactable
+  - Screen
   layers:
   - Default
   - TransparentFX
