@@ -57,11 +57,7 @@ public class ButtonManager : MonoBehaviour
         else
         {
             currentDisplay.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/Wall" + currentDisplay.CurrentWall);
-            currentDisplay.CurrentState = DisplayImage.State.normal;
-            foreach (Button button in buttons)
-            {
-            GetComponent<ButtonBehaviour>().enabled = true;
-            }
+            currentDisplay.CurrentState = DisplayImage.State.normal;           
         }       
         
     }

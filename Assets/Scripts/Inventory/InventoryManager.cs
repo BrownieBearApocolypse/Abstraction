@@ -12,10 +12,10 @@ public class InventoryManager : MonoBehaviour
 
     void InitializeInventory()
     {
-        var slots = GameObject.Find("Inventory");
-        foreach (Transform slot in slots.transform)
+        var Inventory = GameObject.Find("Inventory");
+        foreach (Transform Slot in Inventory.transform)
         {
-            slot.transform.GetChild(0).GetComponent<Image>().sprite =
+            Slot.transform.GetChild(0).GetComponent<Image>().sprite =
                 Resources.Load<Sprite>("Inventory/Empty");
         }
     }

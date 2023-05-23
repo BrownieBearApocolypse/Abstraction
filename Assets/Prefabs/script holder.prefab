@@ -9,10 +9,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6031657300182382351}
-  - component: {fileID: 6031657300182382348}
   - component: {fileID: 6019213012253897245}
   - component: {fileID: 4883876069459815375}
   - component: {fileID: 6271125972005126858}
+  - component: {fileID: 7957009122871334172}
   m_Layer: 0
   m_Name: script holder
   m_TagString: Untagged
@@ -35,18 +35,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6031657300182382348
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6031657300182382349}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e91ff109b4ad9c14d89fb4cabcf9e056, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &6019213012253897245
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -71,7 +59,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f902492e46b16114db17b8bf3a664c79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttons: []
+  buttons:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!114 &6271125972005126858
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -84,3 +76,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7b7135b74f77cf49a87dc7f19bab699, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &7957009122871334172
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6031657300182382349}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90972e2b07b6f6840b2cfe4ee328574b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentDisplay: {fileID: 0}
+  ObjectsToManage:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
