@@ -28,24 +28,8 @@ public class DisplayImage : MonoBehaviour
         }
     }
 
-    private int currentWall;
-    private int previousWall;
-
-    void Start()
-    {        
-        previousWall = 0;
-        currentWall = 1;
-    }
-
-    void Update()
-    {       
-        if (currentWall != previousWall)
-        {
-            GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/Wall" + currentWall.ToString());
-        }           
-       
-        previousWall = currentWall;
-    }
+    private int currentWall; 
+    
 
 }
 

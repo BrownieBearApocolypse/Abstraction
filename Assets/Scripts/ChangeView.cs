@@ -9,7 +9,10 @@ public class ChangeView : MonoBehaviour, IInteractable
 
     public void Interact(DisplayImage currentDisplay)
     {
+        Debug.Log("ClickView");
         currentDisplay.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/" + ViewName);
+        Debug.Log(currentDisplay.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/" + ViewName));
         currentDisplay.CurrentState = DisplayImage.State.ChangedView;
+
     }
 }

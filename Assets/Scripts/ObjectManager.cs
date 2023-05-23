@@ -23,7 +23,7 @@ public class ObjectManager : MonoBehaviour
     {
         for (int i = 0; i < ObjectsToManage.Length; i++)
         {
-            if (ObjectsToManage[i].name == currentDisplay.GetComponent<SpriteRenderer>().sprite.name) //FUCKING CANT FIND Object reference not set to an instance of an object FUCK
+            if (ObjectsToManage[i].name == currentDisplay.GetComponent<SpriteRenderer>().sprite.name)
             {
                 ObjectsToManage[i].SetActive(true);
             }

@@ -6,9 +6,7 @@ using UnityEngine.UI;
 
 public class ButtonManager : MonoBehaviour
 {
-    private DisplayImage currentDisplay;
-
-    public Button[] buttons;
+    private DisplayImage currentDisplay;    
 
     private float initialCameraSize;
     private Vector3 initialCameraPosition;
@@ -19,29 +17,9 @@ public class ButtonManager : MonoBehaviour
         initialCameraSize = Camera.main.orthographicSize;
         initialCameraPosition = Camera.main.transform.position;
     }
-
-    public void OnDoorClick()
-    {
-        currentDisplay.CurrentWall = currentDisplay.CurrentWall + 1;
-    }
-
-    public void OnCurtainClick()
-    {
-        currentDisplay.CurrentWall = currentDisplay.CurrentWall + 2;
-    }
-
-    public void OnWindowClick()
-    {
-        currentDisplay.CurrentWall = currentDisplay.CurrentWall + 3;
-    }
-
-    public void OnTreeClick()
-    {
-        currentDisplay.CurrentWall = currentDisplay.CurrentWall + 4;
-    }
-
+   
     public void OnClickReturn()
-    {
+    {       
         if (currentDisplay.CurrentState == DisplayImage.State.zoom)
         {
             GameObject.Find("displayImage").GetComponent<DisplayImage>().CurrentState = DisplayImage.State.normal;
@@ -56,10 +34,10 @@ public class ButtonManager : MonoBehaviour
         }
         else
         {
-            currentDisplay.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/Wall" + currentDisplay.CurrentWall);
+            currentDisplay.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites" + currentDisplay.CurrentWall);
             currentDisplay.CurrentState = DisplayImage.State.normal;           
         }       
-        
+         Debug.Log("Returned");
     }
     
 }

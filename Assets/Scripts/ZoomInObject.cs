@@ -9,6 +9,7 @@ public class ZoomInObject : MonoBehaviour, IInteractable
     //set object this is attached to to Ignore Raycast
     public void Interact(DisplayImage currentDisplay)
     {
+        Debug.Log("ClickZoom");
         Camera.main.orthographicSize *= ZoomRatio;
         Camera.main.transform.position = new Vector3(this.transform.position.x, this.transform.position.y, this.transform.position.z);
         gameObject.layer = 2;
