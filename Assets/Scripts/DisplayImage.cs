@@ -28,8 +28,7 @@ public class DisplayImage : MonoBehaviour
         }
     }
 
-    private int currentWall; 
+    private int currentWall;
     
-
 }
 

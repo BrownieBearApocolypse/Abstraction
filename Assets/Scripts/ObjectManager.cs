@@ -19,7 +19,7 @@ public class ObjectManager : MonoBehaviour
         ManageObject();
     }
 
-    void ManageObject()
+    public void ManageObject()
     {
         for (int i = 0; i < ObjectsToManage.Length; i++)
         {

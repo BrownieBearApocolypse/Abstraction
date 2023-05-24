@@ -6,6 +6,7 @@ public class ZoomInObject : MonoBehaviour, IInteractable
 {
     //goes on zoom object
     public float ZoomRatio = 0.5f;
+    public GameObject[] changeview;
     //set object this is attached to to Ignore Raycast
     public void Interact(DisplayImage currentDisplay)
     {
@@ -15,6 +16,10 @@ public class ZoomInObject : MonoBehaviour, IInteractable
         gameObject.layer = 2;
         currentDisplay.CurrentState = DisplayImage.State.zoom;
         ConstraintCamera();
+        foreach (var change in changeview)
+        {
+            GetComponent<ChangeView>().enabled = false;
+        }
     }
 
     void ConstraintCamera()

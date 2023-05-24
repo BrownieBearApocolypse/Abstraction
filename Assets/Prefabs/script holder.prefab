@@ -59,7 +59,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f902492e46b16114db17b8bf3a664c79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttons:
+  changeview:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}

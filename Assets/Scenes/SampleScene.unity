@@ -1953,7 +1953,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 852c308247d4ac14e9f88065412dbf44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ZoomRatio: 0.5
+  ZoomRatio: 0.001
+  changeview:
+  - {fileID: 434422792}
+  - {fileID: 1623714561}
+  - {fileID: 2078276842}
+  - {fileID: 1218856988}
 --- !u!65 &520355623
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4562,7 +4567,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1182890784}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -503}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -5258,7 +5263,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 852c308247d4ac14e9f88065412dbf44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ZoomRatio: 0.5
+  ZoomRatio: 0.001
+  changeview:
+  - {fileID: 434422792}
+  - {fileID: 1623714561}
+  - {fileID: 2078276842}
+  - {fileID: 1218856988}
 --- !u!65 &1508014217
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5868,7 +5878,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 852c308247d4ac14e9f88065412dbf44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ZoomRatio: 0.5
+  ZoomRatio: 0.001
+  changeview:
+  - {fileID: 434422792}
+  - {fileID: 1623714561}
+  - {fileID: 2078276842}
+  - {fileID: 1218856988}
 --- !u!65 &1634052358
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7796,6 +7811,22 @@ PrefabInstance:
       propertyPath: buttons.Array.data[3]
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 4883876069459815375, guid: d7bd422a20044d146a1d0a7dd98561df, type: 3}
+      propertyPath: changeview.Array.data[0]
+      value: 
+      objectReference: {fileID: 1623714561}
+    - target: {fileID: 4883876069459815375, guid: d7bd422a20044d146a1d0a7dd98561df, type: 3}
+      propertyPath: changeview.Array.data[1]
+      value: 
+      objectReference: {fileID: 2078276842}
+    - target: {fileID: 4883876069459815375, guid: d7bd422a20044d146a1d0a7dd98561df, type: 3}
+      propertyPath: changeview.Array.data[2]
+      value: 
+      objectReference: {fileID: 1218856988}
+    - target: {fileID: 4883876069459815375, guid: d7bd422a20044d146a1d0a7dd98561df, type: 3}
+      propertyPath: changeview.Array.data[3]
+      value: 
+      objectReference: {fileID: 434422792}
     - target: {fileID: 6031657300182382349, guid: d7bd422a20044d146a1d0a7dd98561df, type: 3}
       propertyPath: m_Name
       value: script holder
