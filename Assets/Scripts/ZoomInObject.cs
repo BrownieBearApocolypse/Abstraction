@@ -1,34 +1,31 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEditor.Experimental.GraphView.GraphView;
 
 public class ZoomInObject : MonoBehaviour, IInteractable
 {
     public GameObject[] changeview;
-    public GameObject[] cameraNewPos;
+    public GameObject cameraNewPos;
+    public string posName;
+    public GameObject[] zoom;
 
     public void Interact(DisplayImage currentDisplay)
     {
         currentDisplay.CurrentState = DisplayImage.State.zoom;
         foreach (var change in changeview)
         {
-            GetComponent<ChangeView>().enabled = false;
-        }
-        for (int i = 0; i < cameraNewPos.Length; i++)
+            change.layer = 2;
+        }       
+        if (cameraNewPos.name == posName)
         {
-            if (cameraNewPos[i].name == currentDisplay.GetComponent<SpriteRenderer>().sprite.name)
-            {
-                
-            }
-            else if (cameraNewPos[i].name == currentDisplay.GetComponent<SpriteRenderer>().sprite.name)
-            {
-               
-            }
-            else
-            {
-
-            }
+            Camera.main.transform.position = cameraNewPos.transform.position;   
         }
+        foreach (var obj in zoom)
+        {
+            obj.layer = 2;
+        }
+            
     }
 
     
