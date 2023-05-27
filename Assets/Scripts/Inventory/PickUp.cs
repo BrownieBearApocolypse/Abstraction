@@ -7,8 +7,11 @@ public class PickUp : MonoBehaviour
 {
     //goes on item
     public string DisplaySprite;
+    public enum Property { usable, displayable};
 
     private GameObject InventorySlots;
+
+    public Property itemProperty;
 
     public void Interact(DisplayImage currentImage)
     {
@@ -28,6 +31,9 @@ public class PickUp : MonoBehaviour
             {
                 slot.transform.GetChild(0).GetComponent<Image>().sprite =
                     Resources.Load<Sprite>("Inventory/" + DisplaySprite);
+                slot.GetComponent<Slot>().AssignProperty((int)itemProperty);
+                Destroy(gameObject);
+                break;
             }
         }
     }

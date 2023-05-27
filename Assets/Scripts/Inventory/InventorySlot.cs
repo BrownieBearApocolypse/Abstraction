@@ -6,6 +6,7 @@ using UnityEngine.EventSystems;
 
 public class InventorySlot : MonoBehaviour, IInteractable
 {
+    //UiDisplayer
     public GameObject DisplayObject;
 
     public void Interact(DisplayImage currentdisplay)

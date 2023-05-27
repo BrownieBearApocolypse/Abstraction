@@ -2,18 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Open : MonoBehaviour
+public class Open : MonoBehaviour, IInteractable
 {
     public GameObject OpenItem;
-    private DisplayImage currentImage;
-
-    private void Start()
-    {
-        currentImage = GameObject.Find("displayImage").GetComponent<DisplayImage>();
-    }
+    
     public void Interact(DisplayImage currentDisplay)
     {
-        if (OpenItem.activeInHierarchy == false && currentImage.CurrentState == DisplayImage.State.zoom)
+        if (OpenItem.activeInHierarchy == false && currentDisplay.CurrentState == DisplayImage.State.zoom)
         {
             OpenItem.SetActive(true);
         }

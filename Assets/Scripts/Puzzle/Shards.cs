@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Shards : MonoBehaviour
+public class Shards : MonoBehaviour, IInteractable
 {
-    void Interact(DisplayImage currentDisplay)
+    public void Interact(DisplayImage currentDisplay)
     {
 
     }

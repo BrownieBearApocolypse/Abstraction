@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Drain : MonoBehaviour
+public class Drain : MonoBehaviour, IInteractable
 {
-    void Interact(DisplayImage currentDisplay)
+    public void Interact(DisplayImage currentDisplay)
     {
 
     }

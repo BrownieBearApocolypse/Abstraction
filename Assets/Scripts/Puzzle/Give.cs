@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Give : MonoBehaviour
+public class Give : MonoBehaviour, IInteractable
 {
-    void Interact(DisplayImage currentDisplay)
+    public void Interact(DisplayImage currentDisplay)
     {
 
     }
