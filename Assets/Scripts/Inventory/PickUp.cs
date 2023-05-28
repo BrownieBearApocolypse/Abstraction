@@ -7,11 +7,14 @@ public class PickUp : MonoBehaviour
 {
     //goes on item
     public string DisplaySprite;
-    public enum Property { usable, displayable};
+    public enum Property { usable, displayable };
 
     private GameObject InventorySlots;
 
+    public string CombinationItem;
+
     public Property itemProperty;
+    public string DisplayImage;
 
     public void Interact(DisplayImage currentImage)
     {
@@ -20,22 +23,24 @@ public class PickUp : MonoBehaviour
 
     void Start()
     {
-        InventorySlots = GameObject.Find("Inventory");
+        
     }
 
-    void ItemPickUp()
+    public void ItemPickUp()
     {
+        InventorySlots = GameObject.Find("Inventory");
+
         foreach (Transform slot in InventorySlots.transform)
         {
             if(slot.transform.GetChild(0).GetComponent<Image>().sprite.name == "Empty")
             {
-                slot.transform.GetChild(0).GetComponent<Image>().sprite =
-                    Resources.Load<Sprite>("Inventory/" + DisplaySprite);
-                slot.GetComponent<Slot>().AssignProperty((int)itemProperty);
+                slot.transform.GetChild(0).GetComponent<Image>().sprite = Resources.Load<Sprite>("Inventory/" + DisplaySprite);
+                slot.GetComponent<Slot>().AssignProperty((int)itemProperty, DisplayImage, CombinationItem);
                 Destroy(gameObject);
                 break;
             }
         }
     }
 
+   
 }

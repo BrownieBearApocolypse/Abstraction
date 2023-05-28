@@ -15,10 +15,11 @@ public class Door : MonoBehaviour, IInteractable
 
     public void Interact(DisplayImage currentDisplay)
     {
-        if (inventory.GetComponent<InventoryManager>().currentSelectedSlot.gameObject.transform.GetChild(0).GetComponent<Image>().sprite.name == UnlockItem)
+        if (inventory.GetComponent<InventoryManager>().currentSelectedSlot.transform.GetChild(0).GetComponent<Image>().sprite.name == UnlockItem)
         {
-
+            Debug.Log("unlock");            
+            inventory.GetComponent<InventoryManager>().currentSelectedSlot.GetComponent<Slot>().ClearSlot();
         }
-        Debug.Log("unlock");
+        
     }
 }
