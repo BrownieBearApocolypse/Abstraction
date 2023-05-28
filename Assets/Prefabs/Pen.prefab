@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 3893558432703209402}
   - component: {fileID: -4104643037033807165}
   - component: {fileID: 6403158807486955641}
+  - component: {fileID: -1278902266600800830}
   m_Layer: 0
   m_Name: Pen
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -46,6 +47,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DisplaySprite: pen
+  CombinationItem: 
+  DisplayImage: 
+  itemProperty: 0
 --- !u!212 &6403158807486955641
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -98,3 +102,16 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!65 &-1278902266600800830
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8761371804467781883}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.4, y: 3.8, z: 0.2}
+  m_Center: {x: 0, y: 0, z: 0}

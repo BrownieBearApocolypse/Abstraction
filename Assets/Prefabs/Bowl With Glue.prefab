@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 8848841420044559142}
   - component: {fileID: -7796464718462938696}
   - component: {fileID: -896510422040906454}
+  - component: {fileID: -1588840430566082903}
   m_Layer: 0
   m_Name: Bowl With Glue
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -46,6 +47,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DisplaySprite: bowlWithGlue
+  CombinationItem: 
+  DisplayImage: 
+  itemProperty: 0
 --- !u!212 &-896510422040906454
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -98,3 +102,16 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!65 &-1588840430566082903
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4171109245845094925}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.23, y: 0.26, z: 0.2}
+  m_Center: {x: 0, y: 0, z: 0}

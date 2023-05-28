@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 3184167165842529754}
   - component: {fileID: 1148228018316087980}
   - component: {fileID: 2079461765451919827}
+  - component: {fileID: -1956442517629239760}
   m_Layer: 0
   m_Name: Screwdriver
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -46,6 +47,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DisplaySprite: screwdriver
+  CombinationItem: 
+  DisplayImage: 
+  itemProperty: 0
 --- !u!212 &2079461765451919827
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -98,3 +102,16 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!65 &-1956442517629239760
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1824044644636836170}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 12, y: 12.75, z: 0.2}
+  m_Center: {x: 0, y: 0, z: 0}

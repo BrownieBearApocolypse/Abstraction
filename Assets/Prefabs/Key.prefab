@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 3263807192838143099}
   - component: {fileID: 2355298644594432961}
   - component: {fileID: -2091551507333433710}
-  - component: {fileID: -6957937491567255768}
+  - component: {fileID: 7863242891837789742}
   m_Layer: 0
   m_Name: Key
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -47,6 +47,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DisplaySprite: key
+  CombinationItem: 
+  DisplayImage: 
+  itemProperty: 0
 --- !u!212 &-2091551507333433710
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -99,15 +102,16 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &-6957937491567255768
-MonoBehaviour:
+--- !u!65 &7863242891837789742
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1180284336533769495}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 06c3ad814e32b794284f502e1c115d4d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  serializedVersion: 2
+  m_Size: {x: 4.3, y: 1.9, z: 0.2}
+  m_Center: {x: 0, y: 0, z: 0}

@@ -11,7 +11,7 @@ public class InventoryManager : MonoBehaviour
     private GameObject Inventory;
     public GameObject itemDisplayer { get; private set; }
 
-    void Start()
+    public void Start()
     {
         InitializeInventory();
     }
@@ -22,7 +22,7 @@ public class InventoryManager : MonoBehaviour
         HideDisplay();
     }
 
-    void InitializeInventory()
+    public void InitializeInventory()
     {
         Inventory = GameObject.Find("Inventory");
         itemDisplayer = GameObject.Find("ItemDisplayer");
@@ -36,13 +36,13 @@ public class InventoryManager : MonoBehaviour
         previousSelectedSlot = currentSelectedSlot;
     }
 
-    void SelectedSlot()
+    public void SelectedSlot()
     {
         foreach (Transform slot in Inventory.transform)
         {
             if(Inventory.gameObject == currentSelectedSlot && slot.GetComponent<Slot>().ItemProperty == Slot.Property.usable)
             {
-                slot.GetComponent<Image>().color = new Color(0.9f, 0.4f, 0.6f, 1);
+                slot.GetComponent<Image>().color = new Color(0.5f, 0.5f, 0.5f, 1);
             }
             else if(slot.gameObject == currentSelectedSlot && slot.GetComponent<Slot>().ItemProperty == Slot.Property.displayable)
             {

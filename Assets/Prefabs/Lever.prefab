@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 4204588254920493955}
   - component: {fileID: -6349672156077826482}
   - component: {fileID: -3842754373226013101}
+  - component: {fileID: -2178195745597627761}
   m_Layer: 0
   m_Name: Lever
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -46,6 +47,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DisplaySprite: lever
+  CombinationItem: 
+  DisplayImage: 
+  itemProperty: 0
 --- !u!212 &-3842754373226013101
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -98,3 +102,16 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!65 &-2178195745597627761
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5045665912080910727}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 4.1, y: 3.1, z: 0.2}
+  m_Center: {x: 0, y: 0, z: 0}

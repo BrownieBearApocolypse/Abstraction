@@ -6,12 +6,12 @@ using UnityEngine.UI;
 
 public class Slot : MonoBehaviour, IPointerClickHandler
 {
-    private GameObject inventory;
-    public enum Property { usable, displayable, empty };
-    public Property ItemProperty { get; set; }
+    private GameObject inventory;   
 
     private string displayImage;
     public string combineItem { get; set; }
+    public enum Property { usable, displayable, empty };
+    public Property ItemProperty { get; set; }
 
     public void Start()
     {
@@ -20,6 +20,7 @@ public class Slot : MonoBehaviour, IPointerClickHandler
 
     public void OnPointerClick(PointerEventData eventData)
     {
+        inventory.GetComponent<InventoryManager>().SelectedSlot();
         inventory.GetComponent<InventoryManager>().previousSelectedSlot = inventory.GetComponent<InventoryManager>().currentSelectedSlot;
         inventory.GetComponent<InventoryManager>().currentSelectedSlot = this.gameObject;
         Combine();
@@ -44,7 +45,8 @@ public class Slot : MonoBehaviour, IPointerClickHandler
 
     public void Combine()
     {
-        if (inventory.GetComponent<InventoryManager>().previousSelectedSlot.GetComponent<Slot>().combineItem == this.gameObject.GetComponent<Slot>().combineItem && this.gameObject.GetComponent<Slot>().combineItem! == "")
+        if (inventory.GetComponent<InventoryManager>().previousSelectedSlot.GetComponent<Slot>().combineItem == 
+            this.gameObject.GetComponent<Slot>().combineItem && this.gameObject.GetComponent<Slot>().combineItem! == "")
         {
             Debug.Log("Combine");
             var combinedItem = Instantiate(Resources.Load<GameObject>("CombineItems/" + combineItem));

@@ -7,8 +7,11 @@ public class Door : MonoBehaviour, IInteractable
 {
     public string UnlockItem;
     private GameObject inventory;
+    public GameObject Open;
+    public GameObject MainOpen;
+    public GameObject MainClosed;
 
-    void Start()
+    public void Start()
     {
         inventory = GameObject.Find("Inventory");
     }
@@ -16,9 +19,12 @@ public class Door : MonoBehaviour, IInteractable
     public void Interact(DisplayImage currentDisplay)
     {
         if (inventory.GetComponent<InventoryManager>().currentSelectedSlot.transform.GetChild(0).GetComponent<Image>().sprite.name == UnlockItem)
-        {
-            Debug.Log("unlock");            
+        {          
             inventory.GetComponent<InventoryManager>().currentSelectedSlot.GetComponent<Slot>().ClearSlot();
+            Open.SetActive(true);
+            MainOpen.SetActive(false);
+            this.gameObject.SetActive(false);
+            MainClosed.SetActive(false);
         }
         
     }
