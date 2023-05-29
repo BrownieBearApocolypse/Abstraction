@@ -22,7 +22,7 @@ public class Door : MonoBehaviour, IInteractable
     {
         Slot currentSlot = inventory.GetComponent<InventoryManager>().currentSelectedSlot.GetComponent<Slot>();
 
-        if (currentDisplay.CurrentState == DisplayImage.State.ChangedView && currentSlot != null && currentSlot.ItemProperty == Slot.Property.usable && currentSlot.combineItem == UnlockItem)
+        if (currentSlot != null && currentSlot.ItemProperty == Slot.Property.usable && currentSlot.combineItem == UnlockItem)
         {
             manager.DoorIsCompleted = true;
             currentSlot.ClearSlot();

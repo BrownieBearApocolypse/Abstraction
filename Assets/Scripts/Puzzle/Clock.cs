@@ -21,11 +21,11 @@ public class Clock : MonoBehaviour, IInteractable
         Slot currentSlot = inventory.GetComponent<InventoryManager>().currentSelectedSlot.GetComponent<Slot>();
         if (currentSlot != null && currentSlot.ItemProperty == Slot.Property.usable && currentDisplay.CurrentState == DisplayImage.State.zoom && inventory.GetComponent<InventoryManager>().currentSelectedSlot.transform.GetChild(0).GetComponent<Image>().sprite.name == ScrewDriver)
         {
-            Debug.Log("I have been CLicked");
             this.gameObject.GetComponent<Animator>().SetTrigger("Clicked");
             Destroy(gameObject, this.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length + delay);
             //Instantiate(Resources.Load<GameObject>("I haven't made it yet"));
             manager.ClockIsCompleted = true;
+            currentSlot.ClearSlot();
         }
     }
 }

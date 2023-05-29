@@ -21,13 +21,13 @@ public class Hand : MonoBehaviour, IInteractable
 
         if (currentSlot != null && currentSlot.ItemProperty == Slot.Property.usable && inventory.GetComponent<InventoryManager>().currentSelectedSlot.transform.GetChild(0).GetComponent<Image>().sprite.name == Pot)
         {
-            this.gameObject.GetComponent<Animator>().SetTrigger("Hand It Over");
+            //this.gameObject.GetComponent<Animator>().SetTrigger("Hand It Over");
             currentSlot.ClearSlot();
             manager.WindowIsCompleted = true;
         }
         else
         {
-            this.gameObject.GetComponent<Animator>().SetTrigger("Clicked");
+            //this.gameObject.GetComponent<Animator>().SetTrigger("Clicked");
         }
     }
 }

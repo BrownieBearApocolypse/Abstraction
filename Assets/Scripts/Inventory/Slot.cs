@@ -49,10 +49,10 @@ public class Slot : MonoBehaviour, IPointerClickHandler
 
         if (previousSlot != null && previousSlot.combineItem == combineItem && !string.IsNullOrEmpty(combineItem))
         {
-            Debug.Log("Combine");
+            
             var combinedItem = Instantiate(Resources.Load<GameObject>("CombineItems/" + combineItem));
-            combinedItem.GetComponent<PickUp>().ItemPickUp();
-
+            combinedItem.gameObject.GetComponent<PickUp>().ItemPickUp();
+            Debug.Log("Combine");
             previousSlot.ClearSlot();
             ClearSlot();
         }

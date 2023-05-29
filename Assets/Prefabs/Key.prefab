@@ -47,7 +47,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DisplaySprite: key
-  CombinationItem: 
+  CombinationItem: key
   DisplayImage: 
   itemProperty: 0
 --- !u!212 &-2091551507333433710

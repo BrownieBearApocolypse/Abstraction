@@ -47,7 +47,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DisplaySprite: brokenPot
-  CombinationItem: Pot
+  CombinationItem: pot
   DisplayImage: 
   itemProperty: 0
 --- !u!212 &7953870746120896762

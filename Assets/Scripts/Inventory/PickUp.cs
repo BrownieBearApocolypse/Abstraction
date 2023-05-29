@@ -17,13 +17,9 @@ public class PickUp : MonoBehaviour, IInteractable
         ItemPickUp();
     }
 
-    public void Start()
-    {
-        InventorySlots = GameObject.Find("Inventory");
-    }
-
     public void ItemPickUp()
     {
+        InventorySlots = GameObject.Find("Inventory");
         foreach (Transform slot in InventorySlots.transform)
         {
             if(slot.transform.GetChild(0).GetComponent<Image>().sprite.name == "Empty")
