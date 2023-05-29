@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class Curtain : MonoBehaviour, IInteractable
 {
     public string ScissorItem;
+    public GameObject mainCurtain;
     private GameObject inventory;
     public float delay = 0.1f;
     private PuzzleManager manager;
@@ -18,9 +19,12 @@ public class Curtain : MonoBehaviour, IInteractable
 
     public void Interact(DisplayImage currentDisplay)
     {
-        if (inventory.GetComponent<InventoryManager>().currentSelectedSlot.transform.GetChild(0).GetComponent<Image>().sprite.name == ScissorItem)
+        Slot currentSlot = inventory.GetComponent<InventoryManager>().currentSelectedSlot.GetComponent<Slot>();
+        if (currentSlot != null && currentSlot.ItemProperty == Slot.Property.usable && inventory.GetComponent<InventoryManager>().currentSelectedSlot.transform.GetChild(0).GetComponent<Image>().sprite.name == ScissorItem)
         {
-            this.gameObject.GetComponent<Animator>().SetTrigger("Clicked");
+            mainCurtain.GetComponent<SpriteRenderer>().enabled = false;
+            manager.CurtainIsCompleted = true;
+            //scissors.gameObject.GetComponent<Animator>().SetTrigger("Clicked");
             Destroy(gameObject, GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length + delay);
         }
     }

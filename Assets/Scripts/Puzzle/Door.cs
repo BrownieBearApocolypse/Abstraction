@@ -10,18 +10,21 @@ public class Door : MonoBehaviour, IInteractable
     public GameObject Open;
     public GameObject MainOpen;
     public GameObject MainClosed;
+    private PuzzleManager manager;
 
     public void Start()
     {
         inventory = GameObject.Find("Inventory");
+        manager = GameObject.Find("script holder").GetComponent<PuzzleManager>();
     }
 
     public void Interact(DisplayImage currentDisplay)
     {
         Slot currentSlot = inventory.GetComponent<InventoryManager>().currentSelectedSlot.GetComponent<Slot>();
 
-        if (currentSlot != null && currentSlot.ItemProperty == Slot.Property.usable && currentSlot.combineItem == UnlockItem)
+        if (currentDisplay.CurrentState == DisplayImage.State.ChangedView && currentSlot != null && currentSlot.ItemProperty == Slot.Property.usable && currentSlot.combineItem == UnlockItem)
         {
+            manager.DoorIsCompleted = true;
             currentSlot.ClearSlot();
             Open.SetActive(true);
             MainOpen.SetActive(false);

@@ -15,6 +15,7 @@ public class Valve : MonoBehaviour, IInteractable
 
     public void Interact(DisplayImage currentDisplay)
     {
+        manager.ValveIsCompleted = true;
         //okay so this only becomes active after valve places but activates another animation then destory object, unclogs drain
         //plays 2 animations, one on click and one on state.normal
 

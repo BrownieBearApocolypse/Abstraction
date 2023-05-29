@@ -11,5 +11,9 @@ public class PuzzleManager : MonoBehaviour
     public bool PotIsCompleted = false;
     public bool WindowIsCompleted = false;
     public bool KineIsCompleted = false;
+    public bool DrainIsCompleted = false;
+    public bool ValveIsCompleted = false;
+    public bool CurtainIsCompleted = false;
+
 
 }

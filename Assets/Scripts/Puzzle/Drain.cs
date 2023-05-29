@@ -17,10 +17,12 @@ public class Drain : MonoBehaviour, IInteractable
 
     public void Interact(DisplayImage currentDisplay)
     {
-        if (inventory.GetComponent<InventoryManager>().currentSelectedSlot.transform.GetChild(0).GetComponent<Image>().sprite.name == LeverItem)
+        Slot currentSlot = inventory.GetComponent<InventoryManager>().currentSelectedSlot.GetComponent<Slot>();
+        if (currentSlot != null && currentSlot.ItemProperty == Slot.Property.usable && inventory.GetComponent<InventoryManager>().currentSelectedSlot.transform.GetChild(0).GetComponent<Image>().sprite.name == LeverItem)
         {
             inventory.GetComponent<InventoryManager>().currentSelectedSlot.GetComponent<Slot>().ClearSlot();
-            GetComponent<PickUp>().ItemPickUp();           
+            GetComponent<PickUp>().ItemPickUp();
+            manager.DrainIsCompleted = true;
         }
     }
 }
