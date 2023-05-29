@@ -60,12 +60,15 @@ public class InventoryManager : MonoBehaviour
 
     public void HideDisplay()
     {
-        itemDisplayer.SetActive(false);
-        if (currentSelectedSlot.GetComponent<Slot>().ItemProperty == Slot.Property.displayable)
+        if (Input.GetMouseButtonDown(0) && !UnityEngine.EventSystems.EventSystem.current.IsPointerOverGameObject())
         {
-            currentSelectedSlot = previousSelectedSlot;
-            previousSelectedSlot = currentSelectedSlot;
+            itemDisplayer.SetActive(false);
+            if (currentSelectedSlot.GetComponent<Slot>().ItemProperty == Slot.Property.displayable)
+            {
+                currentSelectedSlot = previousSelectedSlot;
+                previousSelectedSlot = currentSelectedSlot;
+            }
         }
-      
+
     }
 }

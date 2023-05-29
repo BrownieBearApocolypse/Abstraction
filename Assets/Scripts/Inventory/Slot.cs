@@ -39,8 +39,9 @@ public class Slot : MonoBehaviour, IPointerClickHandler
 
     public void DisplayItem()
     {
-        inventory.GetComponent<InventoryManager>().itemDisplayer.SetActive(true);
-        inventory.GetComponent<InventoryManager>().itemDisplayer.GetComponent<Image>().sprite = Resources.Load<Sprite>("Inventory/" + displayImage);
+        InventoryManager inventoryManager = inventory.GetComponent<InventoryManager>();
+        inventoryManager.itemDisplayer.SetActive(true);
+        inventoryManager.itemDisplayer.GetComponent<Image>().sprite = Resources.Load<Sprite>("Inventory/" + displayImage);
     }
 
     public void Combine()

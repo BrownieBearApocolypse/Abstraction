@@ -7,6 +7,7 @@ public class Curtain : MonoBehaviour, IInteractable
 {
     public string ScissorItem;
     public GameObject mainCurtain;
+    public GameObject bottomCurtain;
     private GameObject inventory;
     public float delay = 0.1f;
     private PuzzleManager manager;
