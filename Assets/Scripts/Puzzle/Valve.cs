@@ -4,6 +4,15 @@ using UnityEngine;
 
 public class Valve : MonoBehaviour, IInteractable
 {
+    private PuzzleManager manager;
+    private GameObject inventory;
+
+    public void Start()
+    {
+        inventory = GameObject.Find("Inventory");
+        manager = GameObject.Find("script holder").GetComponent<PuzzleManager>();
+    }
+
     public void Interact(DisplayImage currentDisplay)
     {
         //okay so this only becomes active after valve places but activates another animation then destory object, unclogs drain

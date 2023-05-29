@@ -18,14 +18,16 @@ public class Door : MonoBehaviour, IInteractable
 
     public void Interact(DisplayImage currentDisplay)
     {
-        if (inventory.GetComponent<InventoryManager>().currentSelectedSlot.transform.GetChild(0).GetComponent<Image>().sprite.name == UnlockItem)
-        {          
-            inventory.GetComponent<InventoryManager>().currentSelectedSlot.GetComponent<Slot>().ClearSlot();
+        Slot currentSlot = inventory.GetComponent<InventoryManager>().currentSelectedSlot.GetComponent<Slot>();
+
+        if (currentSlot != null && currentSlot.ItemProperty == Slot.Property.usable && currentSlot.combineItem == UnlockItem)
+        {
+            currentSlot.ClearSlot();
             Open.SetActive(true);
             MainOpen.SetActive(false);
-            this.gameObject.SetActive(false);
+            gameObject.SetActive(false);
             MainClosed.SetActive(false);
         }
-        
     }
+
 }
