@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 1070881158403901242}
   - component: {fileID: 1188776758829341938}
   - component: {fileID: 2141404029571600982}
+  - component: {fileID: 7609117225460863183}
   m_Layer: 0
   m_Name: fish
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -111,7 +112,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 157c6c7c3b00f244f99c6d139b78d581, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DisplaySprite: 
-  CombinationItem: 
+  DisplaySprite: fish
+  CombinationItem: scroll
   DisplayImage: 
   itemProperty: 0
+  itemPickedUp: 0
+--- !u!114 &7609117225460863183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3662122306127803745}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 228dee6f1327fa04f9a84cb060f09524, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pickUp: {fileID: 2141404029571600982}
+  mainFish: {fileID: 0}

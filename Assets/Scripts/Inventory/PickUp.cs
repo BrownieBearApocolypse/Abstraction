@@ -12,6 +12,7 @@ public class PickUp : MonoBehaviour, IInteractable
     public string CombinationItem;    
     public string DisplayImage;
     public Property itemProperty;
+    [HideInInspector] public bool itemPickedUp;
     public void Interact(DisplayImage currentImage)
     {
         ItemPickUp();
@@ -27,6 +28,7 @@ public class PickUp : MonoBehaviour, IInteractable
                 slot.transform.GetChild(0).GetComponent<Image>().sprite = Resources.Load<Sprite>("Inventory/" + DisplaySprite);
                 slot.GetComponent<Slot>().AssignProperty((int)itemProperty, DisplayImage, CombinationItem);
                 Destroy(gameObject);
+                itemPickedUp = true;
                 break;
             }
         }

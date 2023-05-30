@@ -15,7 +15,7 @@ public class Open : MonoBehaviour, IInteractable
 
     public void Interact(DisplayImage currentDisplay)
     {
-        if (OpenItem.activeInHierarchy == false && currentDisplay.CurrentState == DisplayImage.State.zoom)
+        if (OpenItem.activeInHierarchy == false)
         {
             OpenItem.SetActive(true);
         }

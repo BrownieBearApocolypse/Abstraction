@@ -21,12 +21,13 @@ public class Valve : MonoBehaviour, IInteractable
         manager.ValveIsCompleted = true;
 
         Slot currentSlot = inventory.GetComponent<InventoryManager>().currentSelectedSlot.GetComponent<Slot>();
-        if (currentSlot != null && currentSlot.ItemProperty == Slot.Property.usable && inventory.GetComponent<InventoryManager>().currentSelectedSlot.transform.GetChild(0).GetComponent<Image>().sprite.name == valveHandle)
+        if (currentSlot.ItemProperty == Slot.Property.usable && inventory.GetComponent<InventoryManager>().currentSelectedSlot.transform.GetChild(0).GetComponent<Image>().sprite.name == valveHandle)
         {
             inventory.GetComponent<InventoryManager>().currentSelectedSlot.GetComponent<Slot>().ClearSlot();
             gameObject.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Inventory/" + valveHandle);
             //gameObject.GetComponent<Animator>().SetTrigger("Not here yet");;
             GameObject.Find("shelf").GetComponent<Animator>().SetTrigger("Clicked");
+            Destroy(gameObject);
         }
 
         //REMINDER; TO TRICK PLAYER INTO MELTING CLOCK HAVE A SHEET OF PAPER THEY FIND WITH PERSISTANCE OF MEMORY ON IT ZOOMED IN ON THE MELTED CLOCK
