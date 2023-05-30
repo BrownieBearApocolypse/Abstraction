@@ -44,12 +44,12 @@ public class InventoryManager : MonoBehaviour
 
             if (slot.gameObject == currentSelectedSlot && slotComponent.ItemProperty == Slot.Property.usable)
             {
-                slot.GetComponent<Image>().color = new Color(0.4f, 0.6f, 0.2f, 1);
+                slot.GetComponent<Image>().color = new Color(0.6933962f, 0.9245283f, 0.7045351f, 1);
             }
             else if (slot.gameObject == currentSelectedSlot && slotComponent.ItemProperty == Slot.Property.displayable)
             {
                 slotComponent.DisplayItem();
-                slot.GetComponent<Image>().color = new Color(0.4f, 0.6f, 0.2f, 1);
+                slot.GetComponent<Image>().color = new Color(0.6933962f, 0.9245283f, 0.7045351f, 1);
             }
             else
             {
@@ -61,10 +61,11 @@ public class InventoryManager : MonoBehaviour
 
     public void HideDisplay()
     {
+        var slot = GameObject.Find("Inventory").GetComponent<Slot>();
         if (!UnityEngine.EventSystems.EventSystem.current.IsPointerOverGameObject())
         {
             itemDisplayer.SetActive(false);
-            if (currentSelectedSlot.GetComponent<Slot>().ItemProperty == Slot.Property.displayable) // need someting here?
+            if (currentSelectedSlot.GetComponent<Slot>().ItemProperty == Slot.Property.displayable)
             {
                 currentSelectedSlot = previousSelectedSlot;
                 previousSelectedSlot = currentSelectedSlot;

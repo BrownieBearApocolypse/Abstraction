@@ -21,7 +21,7 @@ public class Curtain : MonoBehaviour, IInteractable
     public void Interact(DisplayImage currentDisplay)
     {
         Slot currentSlot = inventory.GetComponent<InventoryManager>().currentSelectedSlot.GetComponent<Slot>();
-        if (currentSlot != null && currentSlot.ItemProperty == Slot.Property.usable && inventory.GetComponent<InventoryManager>().currentSelectedSlot.transform.GetChild(0).GetComponent<Image>().sprite.name == ScissorItem)
+        if (currentSlot.ItemProperty == Slot.Property.usable && inventory.GetComponent<InventoryManager>().currentSelectedSlot.transform.GetChild(0).GetComponent<Image>().sprite.name == ScissorItem)
         {
             mainCurtain.GetComponent<SpriteRenderer>().enabled = false;
             manager.CurtainIsCompleted = true;

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: -2091551507333433710}
   - component: {fileID: 7863242891837789742}
   m_Layer: 0
-  m_Name: Key
+  m_Name: Drawer_Key
   m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

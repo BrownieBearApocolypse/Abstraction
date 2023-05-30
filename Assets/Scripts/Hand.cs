@@ -19,11 +19,12 @@ public class Hand : MonoBehaviour, IInteractable
     {
         Slot currentSlot = inventory.GetComponent<InventoryManager>().currentSelectedSlot.GetComponent<Slot>();
 
-        if (currentSlot != null && currentSlot.ItemProperty == Slot.Property.usable && inventory.GetComponent<InventoryManager>().currentSelectedSlot.transform.GetChild(0).GetComponent<Image>().sprite.name == Pot)
+        if (currentSlot.ItemProperty == Slot.Property.usable && inventory.GetComponent<InventoryManager>().currentSelectedSlot.transform.GetChild(0).GetComponent<Image>().sprite.name == Pot)
         {
             //this.gameObject.GetComponent<Animator>().SetTrigger("Hand It Over");
             currentSlot.ClearSlot();
             manager.WindowIsCompleted = true;
+            this.gameObject.GetComponent<SpriteRenderer>().color = new Color(0.34f, 0.5f, 0.8f, 1f);
         }
         else
         {
