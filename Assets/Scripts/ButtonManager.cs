@@ -33,6 +33,19 @@ public class ButtonManager : MonoBehaviour
                 change.layer = 0;
             }            
         }
+        if (currentDisplay.CurrentState == DisplayImage.State.doubleZoom)
+        {
+            currentDisplay.CurrentState = DisplayImage.State.normal;
+            Camera.main.transform.position = new Vector3(0f, 0f, -837.93f);
+            foreach (var obj in zoom)
+            {
+                obj.layer = 0;
+            }
+            foreach (var change in changeview)
+            {
+                change.layer = 0;
+            }
+        }
         else
         {
             currentDisplay.CurrentState = DisplayImage.State.normal;

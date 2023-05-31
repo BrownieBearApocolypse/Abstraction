@@ -19,7 +19,8 @@ public class Hand : MonoBehaviour, IInteractable
     {
         Slot currentSlot = inventory.GetComponent<InventoryManager>().currentSelectedSlot.GetComponent<Slot>();
 
-        if (currentSlot.ItemProperty == Slot.Property.usable && inventory.GetComponent<InventoryManager>().currentSelectedSlot.transform.GetChild(0).GetComponent<Image>().sprite.name == Pot)
+        if (currentSlot.ItemProperty == Slot.Property.usable 
+            && inventory.GetComponent<InventoryManager>().currentSelectedSlot.transform.GetChild(0).GetComponent<Image>().sprite.name == Pot)
         {
             //this.gameObject.GetComponent<Animator>().SetTrigger("Hand It Over");
             currentSlot.ClearSlot();

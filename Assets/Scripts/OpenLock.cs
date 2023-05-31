@@ -23,8 +23,8 @@ public class OpenLock : MonoBehaviour, IInteractable
         if (currentSlot != null && currentSlot.ItemProperty == Slot.Property.usable && currentSlot.combineItem == UnlockItem)
         {
             currentSlot.ClearSlot();
+            Destroy(gameObject);
             Open.SetActive(true);
-            gameObject.SetActive(false);
         }
     }
 

@@ -1,13 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine.UI;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class Drain : MonoBehaviour, IInteractable
+public class Glass : MonoBehaviour, IInteractable
 {
     public string LeverItem;
     private GameObject inventory;
     private PuzzleManager manager;
+    public string shards;
+    public float delay = 1f;
+
 
     public void Start()
     {
@@ -22,8 +25,9 @@ public class Drain : MonoBehaviour, IInteractable
             && inventory.GetComponent<InventoryManager>().currentSelectedSlot.transform.GetChild(0).GetComponent<Image>().sprite.name == LeverItem)
         {
             inventory.GetComponent<InventoryManager>().currentSelectedSlot.GetComponent<Slot>().ClearSlot();
-            GetComponent<PickUp>().ItemPickUp();
-            manager.DrainIsCompleted = true;
+            Destroy(gameObject /*this.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length + delay*/);
+            //this.gameObject.GetComponent<Animator>().SetTrigger("Clicked");
+            Instantiate(Resources.Load<GameObject>("CombineItems/" + shards));
         }
     }
 }
