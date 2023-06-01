@@ -30,46 +30,54 @@ public class PuzzleManager : MonoBehaviour
 
     public bool VendingIsCompleted = false;
 
-    public bool allAre0Degrees = false;
-    private GameObject rotated;
-
-    public void Start()
-    {
-        rotated = GameObject.Find("RotateThisShit");
-    }
-
-    public void IsRotateCompleted()
-    {        
-        bool allChildrenZeroRotation = CheckChildrenRotation(rotated.transform);
-        if (allChildrenZeroRotation)
-        {
-            allAre0Degrees = true;
-            rotated.transform.GetChild(0).GetComponent<Rotate>().enabled = false;
-        }
-    }
+    public bool rotateCompleted = false;
 
 
-    private bool CheckChildrenRotation(Transform parent)
-    {
-        foreach (Transform child in parent)
-        {
-            // Check if the child's rotation is not equal to zero
-            float childRotation = child.rotation.eulerAngles.y;
-            if (childRotation != 0f && childRotation != 360f)
-            {
-                return false;
-            }
 
-            // Recursive call to check the rotation of the child's children
-            bool childRotationCheck = CheckChildrenRotation(child);
 
-            // If any child has a non-zero rotation, return false
-            if (!childRotationCheck)
-            {
-                return false;
-            }
-        }
 
-        return true;
-    }
+ //private GameObject targetObject;
+ //public Vector3 desiredRotation = Vector3.zero;
+ //public float rotationTolerance = 0.1f; // Tolerance threshold for rotation comparison
+ //
+ //private void Start()
+ //{
+ //    targetObject = GameObject.Find("RotateThisShit");
+ //    // Call the CheckChildrenRotation function to check the rotation of all children
+ //    bool allChildrenDesiredRotation = CheckChildrenRotation(targetObject.transform);
+ //
+ //    if (allChildrenDesiredRotation)
+ //    {
+ //        rotateCompleted = true;
+ //        targetObject.transform.GetChild(0).GetComponent<Rotate>().enabled = false;
+ //        Debug.Log("All children of " + targetObject.name + " have the desired rotation.");
+ //    }
+ //    else
+ //    {
+ //        Debug.Log("Not all children of " + targetObject.name + " have the desired rotation.");
+ //    }
+ //}
+ //
+ //private bool CheckChildrenRotation(Transform parent)
+ //{
+ //    foreach (Transform child in parent)
+ //    {
+ //        // Check if the child's local rotation is close to the desired rotation
+ //        if (Quaternion.Angle(child.localRotation, Quaternion.Euler(desiredRotation)) > rotationTolerance)
+ //        {
+ //            return false;
+ //        }
+ //
+ //        // Recursive call to check the rotation of the child's children
+ //        bool childRotationCheck = CheckChildrenRotation(child);
+ //
+ //        // If any child has a rotation different from the desired rotation, return false
+ //        if (!childRotationCheck)
+ //        {
+ //            return false;
+ //        }
+ //    }
+ //
+ //    return true;
+ //}
 }

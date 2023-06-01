@@ -26,6 +26,8 @@ public class Hand : MonoBehaviour, IInteractable
             currentSlot.ClearSlot();
             manager.WindowIsCompleted = true;
             this.gameObject.GetComponent<SpriteRenderer>().color = new Color(0.34f, 0.5f, 0.8f, 1f);
+            Application.Quit();
+            Debug.Log("done, you Did It");
         }
         else
         {

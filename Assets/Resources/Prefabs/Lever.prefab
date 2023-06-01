@@ -99,9 +99,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DisplaySprite: lever
+  newcolor: {r: 1, g: 1, b: 1, a: 1}
   CombinationItem: 
   DisplayImage: 
   itemProperty: 0
+  itemPickedUp: 0
 --- !u!65 &3833183300044796588
 BoxCollider:
   m_ObjectHideFlags: 0

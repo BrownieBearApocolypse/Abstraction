@@ -47,9 +47,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DisplaySprite: key
+  newcolor: {r: 1, g: 1, b: 1, a: 1}
   CombinationItem: key
   DisplayImage: 
   itemProperty: 0
+  itemPickedUp: 0
 --- !u!212 &-2091551507333433710
 SpriteRenderer:
   m_ObjectHideFlags: 0

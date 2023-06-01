@@ -47,7 +47,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DisplaySprite: shards_1
-  CombinationItem: item
+  newcolor: {r: 1, g: 1, b: 1, a: 0}
+  CombinationItem: Tomato
   DisplayImage: 
   itemProperty: 0
   itemPickedUp: 0

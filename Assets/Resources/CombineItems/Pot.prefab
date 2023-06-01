@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3518180094437883941}
   - component: {fileID: -5350960948840354839}
   m_Layer: 0
-  m_Name: pot
+  m_Name: Pot
   m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -46,9 +46,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DisplaySprite: pot
+  newcolor: {r: 1, g: 1, b: 1, a: 0}
   CombinationItem: pot
   DisplayImage: 
   itemProperty: 0
+  itemPickedUp: 0
 --- !u!212 &-5350960948840354839
 SpriteRenderer:
   m_ObjectHideFlags: 0

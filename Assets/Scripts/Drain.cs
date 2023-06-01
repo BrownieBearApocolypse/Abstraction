@@ -21,7 +21,6 @@ public class Drain : MonoBehaviour, IInteractable
         if (currentSlot != null && currentSlot.ItemProperty == Slot.Property.usable 
             && inventory.GetComponent<InventoryManager>().currentSelectedSlot.transform.GetChild(0).GetComponent<Image>().sprite.name == LeverItem)
         {
-            inventory.GetComponent<InventoryManager>().currentSelectedSlot.GetComponent<Slot>().ClearSlot();
             GetComponent<PickUp>().ItemPickUp();
             manager.DrainIsCompleted = true;
         }

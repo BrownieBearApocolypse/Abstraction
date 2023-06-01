@@ -24,7 +24,6 @@ public class Glass : MonoBehaviour, IInteractable
         if (currentSlot != null && currentSlot.ItemProperty == Slot.Property.usable 
             && inventory.GetComponent<InventoryManager>().currentSelectedSlot.transform.GetChild(0).GetComponent<Image>().sprite.name == LeverItem)
         {
-            inventory.GetComponent<InventoryManager>().currentSelectedSlot.GetComponent<Slot>().ClearSlot();
             Destroy(gameObject /*this.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length + delay*/);
             //this.gameObject.GetComponent<Animator>().SetTrigger("Clicked");
             Instantiate(Resources.Load<GameObject>("CombineItems/" + shards));

@@ -112,6 +112,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DisplaySprite: Scroll
+  newcolor: {r: 1, g: 1, b: 1, a: 0}
   CombinationItem: 
   DisplayImage: POM
   itemProperty: 1

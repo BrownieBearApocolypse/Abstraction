@@ -46,10 +46,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 157c6c7c3b00f244f99c6d139b78d581, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DisplaySprite: key
-  CombinationItem: key
+  DisplaySprite: key_Cab
+  newcolor: {r: 0.8862746, g: 0.30588236, b: 0.24313727, a: 1}
+  CombinationItem: key_Cab
   DisplayImage: 
   itemProperty: 0
+  itemPickedUp: 0
 --- !u!212 &-2091551507333433710
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -92,7 +94,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 5aaaea52bfa3add4a8b5ab014277d409, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.8862746, g: 0.30588236, b: 0.24313727, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
