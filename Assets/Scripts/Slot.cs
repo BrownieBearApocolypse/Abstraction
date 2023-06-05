@@ -12,10 +12,12 @@ public class Slot : MonoBehaviour, IPointerClickHandler
     public string combineItem { get; set; }
     public enum Property { usable, displayable, empty };
     public Property ItemProperty { get; set; }
+    private PickUp pickUp;
 
     public void Start()
     {
         inventory = GameObject.Find("Inventory");
+        pickUp = GameObject.Find("script holder").GetComponent<PickUp>();
     }
 
     public void OnPointerClick(PointerEventData eventData)
@@ -35,6 +37,7 @@ public class Slot : MonoBehaviour, IPointerClickHandler
         ItemProperty = (Property)orderNumber;
         this.displayImage = displayImage;
         this.combineItem = combineItem;
+        gameObject.transform.GetChild(0).GetComponent<Image>().color = pickUp.newcolor;
     }
 
     public void DisplayItem()

@@ -28,7 +28,6 @@ public class PickUp : MonoBehaviour, IInteractable
             {
                 slot.transform.GetChild(0).GetComponent<Image>().sprite = Resources.Load<Sprite>("Inventory/" + DisplaySprite);
                 slot.GetComponent<Slot>().AssignProperty((int)itemProperty, DisplayImage, CombinationItem);
-                slot.GetComponent<Image>().color = newcolor;
                 Destroy(gameObject);
                 itemPickedUp = true;
                 break;
