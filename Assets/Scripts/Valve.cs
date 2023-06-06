@@ -8,7 +8,7 @@ public class Valve : MonoBehaviour, IInteractable
     private PuzzleManager manager;
     private GameObject inventory;
     public string valveHandle;
-    public float delay = 0f;
+    public float delay = 3f;
 
     public void Start()
     {
@@ -25,9 +25,7 @@ public class Valve : MonoBehaviour, IInteractable
         {
             inventory.GetComponent<InventoryManager>().currentSelectedSlot.GetComponent<Slot>().ClearSlot();
             gameObject.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Inventory/" + valveHandle);
-            //gameObject.GetComponent<Animator>().SetTrigger("Not here yet");;
-            GameObject.Find("shelf").GetComponent<Animator>().SetTrigger("Clicked");
-            Destroy(gameObject);
+            Destroy(gameObject, delay);
         }
 
         //REMINDER; TO TRICK PLAYER INTO MELTING CLOCK HAVE A SHEET OF PAPER THEY FIND WITH PERSISTANCE OF MEMORY ON IT ZOOMED IN ON THE MELTED CLOCK

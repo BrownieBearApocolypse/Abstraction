@@ -7,7 +7,6 @@ public class PickUp : MonoBehaviour, IInteractable
 {
     //goes on item
     public string DisplaySprite;
-    public Color newcolor;
     public enum Property { usable, displayable };
     private GameObject InventorySlots;
     public string CombinationItem;    

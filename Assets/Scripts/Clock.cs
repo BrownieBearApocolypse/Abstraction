@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
+using static UnityEditor.PlayerSettings;
 
 public class Clock : MonoBehaviour, IInteractable
 {
-    public float delay = 1f;
+    private int limit = 5;
     private PuzzleManager manager;
     private GameObject inventory;
     public string ScrewDriver;
@@ -22,13 +24,19 @@ public class Clock : MonoBehaviour, IInteractable
         Slot currentSlot = inventory.GetComponent<InventoryManager>().currentSelectedSlot.GetComponent<Slot>();
         if (currentSlot != null && currentSlot.ItemProperty == Slot.Property.usable && currentDisplay.CurrentState == DisplayImage.State.zoom 
             && inventory.GetComponent<InventoryManager>().currentSelectedSlot.transform.GetChild(0).GetComponent<Image>().sprite.name == ScrewDriver)
-        {
-            this.gameObject.GetComponent<Animator>().SetTrigger("Clicked");
-            Destroy(gameObject, this.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length + delay);
-            manager.ClockIsCompleted = true;
+        {            
             currentSlot.ClearSlot();
-            Instantiate(Resources.Load<GameObject>("CombineItems/" + gift));
+            manager.ClockIsCompleted = true;
+            Destroy(gameObject, limit);
+            Invoke("MakeThing", 5.5f);
+
         }
+    }
+    
+    public void MakeThing()
+    {
+        Debug.Log("IGotHere");
+        Instantiate(Resources.Load<GameObject>("CombineItems/" + gift));
     }
 }
     

@@ -9,7 +9,6 @@ public class Curtain : MonoBehaviour, IInteractable
     public GameObject mainCurtain;
     public GameObject bottomCurtain;
     private GameObject inventory;
-    public float delay = 0.1f;
     private PuzzleManager manager;
 
     public void Start()
@@ -25,8 +24,7 @@ public class Curtain : MonoBehaviour, IInteractable
         {
             mainCurtain.GetComponent<SpriteRenderer>().enabled = false;
             manager.CurtainIsCompleted = true;
-            //scissors.gameObject.GetComponent<Animator>().SetTrigger("Clicked");
-            Destroy(gameObject, GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length + delay);
+            Destroy(gameObject);
         }
     }
 }

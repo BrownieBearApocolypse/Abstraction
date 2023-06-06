@@ -47,7 +47,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DisplaySprite: valve
-  newcolor: {r: 1, g: 1, b: 1, a: 1}
   CombinationItem: 
   DisplayImage: 
   itemProperty: 0
@@ -93,7 +92,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 5e32ea742c153f346a1fa91c50a3c292, type: 2}
+  m_Sprite: {fileID: 21300000, guid: 5ed3fac1bc2ec5d4782fa74fbe444956, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

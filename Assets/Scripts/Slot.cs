@@ -12,12 +12,10 @@ public class Slot : MonoBehaviour, IPointerClickHandler
     public string combineItem { get; set; }
     public enum Property { usable, displayable, empty };
     public Property ItemProperty { get; set; }
-    private PickUp pickUp;
 
     public void Start()
     {
         inventory = GameObject.Find("Inventory");
-        pickUp = GameObject.Find("script holder").GetComponent<PickUp>();
     }
 
     public void OnPointerClick(PointerEventData eventData)
@@ -36,8 +34,7 @@ public class Slot : MonoBehaviour, IPointerClickHandler
     {
         ItemProperty = (Property)orderNumber;
         this.displayImage = displayImage;
-        this.combineItem = combineItem;
-        gameObject.transform.GetChild(0).GetComponent<Image>().color = pickUp.newcolor;
+        this.combineItem = combineItem;        
     }
 
     public void DisplayItem()
@@ -52,7 +49,7 @@ public class Slot : MonoBehaviour, IPointerClickHandler
         Slot previousSlot = inventory.GetComponent<InventoryManager>().previousSelectedSlot.GetComponent<Slot>();
         Slot currentSlot = inventory.GetComponent<InventoryManager>().currentSelectedSlot.GetComponent<Slot>();
 
-        if (previousSlot != null && previousSlot.combineItem == combineItem && currentSlot.combineItem == combineItem)
+        if (previousSlot != null && previousSlot != currentSlot && currentSlot != null && previousSlot.combineItem == combineItem && currentSlot.combineItem == combineItem)
         {            
             var combinedItem = Instantiate(Resources.Load<GameObject>("CombineItems/" + combineItem));
             combinedItem.gameObject.GetComponent<PickUp>().ItemPickUp();
