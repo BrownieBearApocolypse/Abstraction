@@ -7,7 +7,7 @@ using static UnityEditor.PlayerSettings;
 
 public class Clock : MonoBehaviour, IInteractable
 {
-    private int limit = 5;
+    private float limit = 1.2f;
     private PuzzleManager manager;
     private GameObject inventory;
     public string ScrewDriver;
@@ -28,7 +28,7 @@ public class Clock : MonoBehaviour, IInteractable
             currentSlot.ClearSlot();
             manager.ClockIsCompleted = true;
             Destroy(gameObject, limit);
-            Invoke("MakeThing", 5.5f);
+            Invoke("MakeThing", 1);
 
         }
     }

@@ -8,8 +8,6 @@ public class Door : MonoBehaviour, IInteractable
     public string UnlockItem;
     private GameObject inventory;
     public GameObject Open;
-    public GameObject MainOpen;
-    public GameObject MainClosed;
     private PuzzleManager manager;
 
     public void Start()
@@ -27,9 +25,7 @@ public class Door : MonoBehaviour, IInteractable
             manager.DoorIsCompleted = true;
             currentSlot.ClearSlot();
             Open.SetActive(true);
-            MainOpen.SetActive(false);
             gameObject.SetActive(false);
-            MainClosed.SetActive(false);
         }
     }
 

@@ -54,6 +54,7 @@ public class InventoryManager : MonoBehaviour
                 slotComponent.DisplayItem();
                 slot.GetComponent<Image>().color = new Color(0.6933962f, 0.9245283f, 0.7045351f, 1);
             }
+            
             else
             {
                 slot.GetComponent<Image>().color = new Color(1, 1, 1, 1);

@@ -9,7 +9,6 @@ public class Glass : MonoBehaviour, IInteractable
     private GameObject inventory;
     private PuzzleManager manager;
     public string shards;
-    public float delay = 1f;
 
 
     public void Start()
@@ -24,8 +23,7 @@ public class Glass : MonoBehaviour, IInteractable
         if (currentSlot != null && currentSlot.ItemProperty == Slot.Property.usable 
             && inventory.GetComponent<InventoryManager>().currentSelectedSlot.transform.GetChild(0).GetComponent<Image>().sprite.name == LeverItem)
         {
-            Destroy(gameObject /*this.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length + delay*/);
-            //this.gameObject.GetComponent<Animator>().SetTrigger("Clicked");
+            Destroy(gameObject);
             Instantiate(Resources.Load<GameObject>("CombineItems/" + shards));
         }
     }

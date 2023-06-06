@@ -49,7 +49,7 @@ public class Slot : MonoBehaviour, IPointerClickHandler
         Slot previousSlot = inventory.GetComponent<InventoryManager>().previousSelectedSlot.GetComponent<Slot>();
         Slot currentSlot = inventory.GetComponent<InventoryManager>().currentSelectedSlot.GetComponent<Slot>();
 
-        if (previousSlot != null && previousSlot != currentSlot && currentSlot != null && previousSlot.combineItem == combineItem && currentSlot.combineItem == combineItem)
+        if ( previousSlot != currentSlot && previousSlot != null && currentSlot != null && previousSlot.combineItem == combineItem && currentSlot.combineItem == combineItem)
         {            
             var combinedItem = Instantiate(Resources.Load<GameObject>("CombineItems/" + combineItem));
             combinedItem.gameObject.GetComponent<PickUp>().ItemPickUp();

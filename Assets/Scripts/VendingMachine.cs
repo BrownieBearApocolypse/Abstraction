@@ -26,8 +26,7 @@ public class VendingMachine : MonoBehaviour, IInteractable
             && inventory.GetComponent<InventoryManager>().currentSelectedSlot.transform.GetChild(0).GetComponent<Image>().sprite.name == money)
         {
             inventory.GetComponent<InventoryManager>().currentSelectedSlot.GetComponent<Slot>().ClearSlot();
-            Instantiate(Resources.Load<GameObject>("CombineItems/" + gift));
-            //gameObject.GetComponent<Animator>().SetTrigger("Not here yet");;            
+            Instantiate(Resources.Load<GameObject>("CombineItems/" + gift));       
         }
     }
 }
