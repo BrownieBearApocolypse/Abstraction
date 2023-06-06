@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class Pause : MonoBehaviour
 {
+    public GameObject pausemenu;
     public void Update()
     {
         
@@ -16,11 +17,11 @@ public class Pause : MonoBehaviour
 
     public void PauseS()
     {
-        GameObject.Find("PauseMenu").SetActive(true);
+        pausemenu.SetActive(true);
     }
 
     public void Exit()
     {
-        GameObject.Find("PauseMenu").SetActive(false);  
+        pausemenu.SetActive(false);  
     }
 }

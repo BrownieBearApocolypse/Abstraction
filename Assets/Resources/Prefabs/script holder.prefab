@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4883876069459815375}
   - component: {fileID: 6271125972005126858}
   - component: {fileID: 7957009122871334172}
+  - component: {fileID: 6271125972005126862}
   m_Layer: 0
   m_Name: script holder
   m_TagString: Untagged
@@ -63,6 +64,9 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  zoom:
+  - {fileID: 0}
+  - {fileID: 0}
   - {fileID: 0}
 --- !u!114 &6271125972005126858
 MonoBehaviour:
@@ -76,6 +80,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7b7135b74f77cf49a87dc7f19bab699, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ClockIsCompleted: 0
+  DoorIsCompleted: 0
+  ShelfIsCompleted: 0
+  SliderIsCompleted: 0
+  PotIsCompleted: 0
+  WindowIsCompleted: 0
+  KineIsCompleted: 0
+  DrainIsCompleted: 0
+  ValveIsCompleted: 0
+  CurtainIsCompleted: 0
+  GlassIsCompleted: 0
+  FlowerPotIsMade: 0
+  VendingIsCompleted: 0
+  rotateCompleted: 0
 --- !u!114 &7957009122871334172
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -94,4 +112,16 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  - {fileID: 0}
+--- !u!114 &6271125972005126862
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6031657300182382349}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b70e411f21210d4c96e570e6f65d687, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pausemenu: {fileID: 0}
