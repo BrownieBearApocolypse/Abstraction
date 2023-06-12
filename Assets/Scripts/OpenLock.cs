@@ -22,6 +22,7 @@ public class OpenLock : MonoBehaviour, IInteractable
 
         if (currentSlot != null && currentSlot.ItemProperty == Slot.Property.usable && currentSlot.combineItem == UnlockItem)
         {
+            this.gameObject.GetComponent<AudioSource>().Play();
             currentSlot.ClearSlot();
             Destroy(gameObject);
             Open.SetActive(true);

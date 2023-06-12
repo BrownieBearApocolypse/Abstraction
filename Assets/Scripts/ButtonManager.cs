@@ -20,6 +20,7 @@ public class ButtonManager : MonoBehaviour
    
     public void OnClickReturn()
     {
+        this.gameObject.GetComponent<AudioSource>().Play();
         if (currentDisplay.CurrentState == DisplayImage.State.zoom)
         {   
             currentDisplay.CurrentState = DisplayImage.State.normal;

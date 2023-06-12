@@ -22,6 +22,7 @@ public class Curtain : MonoBehaviour, IInteractable
         Slot currentSlot = inventory.GetComponent<InventoryManager>().currentSelectedSlot.GetComponent<Slot>();
         if (currentSlot.ItemProperty == Slot.Property.usable && inventory.GetComponent<InventoryManager>().currentSelectedSlot.transform.GetChild(0).GetComponent<Image>().sprite.name == ScissorItem)
         {
+            this.gameObject.GetComponent<AudioSource>().Play();
             mainCurtain.GetComponent<SpriteRenderer>().enabled = false;
             manager.CurtainIsCompleted = true;
             Destroy(gameObject);

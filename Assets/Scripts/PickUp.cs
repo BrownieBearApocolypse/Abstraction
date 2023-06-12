@@ -25,6 +25,7 @@ public class PickUp : MonoBehaviour, IInteractable
         {
             if(slot.transform.GetChild(0).GetComponent<Image>().sprite.name == "Empty")
             {
+                this.gameObject.GetComponent<AudioSource>().Play();
                 slot.transform.GetChild(0).GetComponent<Image>().sprite = Resources.Load<Sprite>("Inventory/" + DisplaySprite);
                 slot.GetComponent<Slot>().AssignProperty((int)itemProperty, DisplayImage, CombinationItem);
                 Destroy(gameObject);

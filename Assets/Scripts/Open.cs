@@ -17,11 +17,8 @@ public class Open : MonoBehaviour, IInteractable
     {
         if (OpenItem.activeInHierarchy == false)
         {
+            this.gameObject.GetComponent<AudioSource>().Play();
             OpenItem.SetActive(true);
-        }
-        else
-        {
-            OpenItem.SetActive(false);
         }
     }
 }

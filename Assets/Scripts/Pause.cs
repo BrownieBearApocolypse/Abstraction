@@ -6,17 +6,11 @@ using UnityEngine.UI;
 public class Pause : MonoBehaviour
 {
     public GameObject pausemenu;
-    public void Update()
-    {
-        
-        if (Input.GetKeyUp(KeyCode.Escape))
-        {
-            Application.Quit();
-        }
-    }
+   
 
     public void PauseS()
     {
+        this.gameObject.GetComponent<AudioSource>().Play();
         pausemenu.SetActive(true);
     }
 
@@ -24,4 +18,11 @@ public class Pause : MonoBehaviour
     {
         pausemenu.SetActive(false);  
     }
+
+    public void CloseGame()
+    {
+        Application.Quit();
+    }
+        
+        
 }

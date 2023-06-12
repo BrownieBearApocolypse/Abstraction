@@ -6,7 +6,6 @@ using UnityEngine.UI;
 
 public class Clock : MonoBehaviour, IInteractable
 {
-    private float limit = 1.2f;
     private PuzzleManager manager;
     private GameObject inventory;
     public string ScrewDriver;
@@ -23,18 +22,21 @@ public class Clock : MonoBehaviour, IInteractable
         Slot currentSlot = inventory.GetComponent<InventoryManager>().currentSelectedSlot.GetComponent<Slot>();
         if (currentSlot != null && currentSlot.ItemProperty == Slot.Property.usable && currentDisplay.CurrentState == DisplayImage.State.zoom 
             && inventory.GetComponent<InventoryManager>().currentSelectedSlot.transform.GetChild(0).GetComponent<Image>().sprite.name == ScrewDriver)
-        {            
+        {
+            this.gameObject.GetComponent<AudioSource>().Play();
             currentSlot.ClearSlot();
             manager.ClockIsCompleted = true;
-            Destroy(gameObject, limit);
-            Invoke("MakeThing", 1);
-
+            this.gameObject.GetComponent<Animator>().SetTrigger("Clicked");
         }
     }
+
+    public void BuhBye()
+    {
+        Destroy(gameObject);
+    }    
     
     public void MakeThing()
     {
-        Debug.Log("IGotHere");
         Instantiate(Resources.Load<GameObject>("CombineItems/" + gift));
     }
 }

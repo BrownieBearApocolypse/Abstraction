@@ -22,6 +22,7 @@ public class Door : MonoBehaviour, IInteractable
 
         if (currentSlot != null && currentSlot.ItemProperty == Slot.Property.usable && currentSlot.combineItem == UnlockItem)
         {
+            this.gameObject.GetComponent<AudioSource>().Play();
             manager.DoorIsCompleted = true;
             currentSlot.ClearSlot();
             Open.SetActive(true);

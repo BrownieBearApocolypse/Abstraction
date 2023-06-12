@@ -5,18 +5,16 @@ using UnityEngine.UI;
 
 public class VendingMachine : MonoBehaviour, IInteractable
 {
-
-    private PuzzleManager manager;
     private GameObject inventory;
     public string money;
     public string gift;
     public float delay = 0f;
+    public GameObject mouth;
 
 
     public void Start()
     {
         inventory = GameObject.Find("Inventory");
-        manager = GameObject.Find("script holder").GetComponent<PuzzleManager>();
     }
 
     public void Interact(DisplayImage currentDisplay)
@@ -25,8 +23,11 @@ public class VendingMachine : MonoBehaviour, IInteractable
         if (currentDisplay.CurrentState == DisplayImage.State.zoom && slot.ItemProperty == Slot.Property.usable 
             && inventory.GetComponent<InventoryManager>().currentSelectedSlot.transform.GetChild(0).GetComponent<Image>().sprite.name == money)
         {
+            this.gameObject.GetComponent<AudioSource>().Play();
             inventory.GetComponent<InventoryManager>().currentSelectedSlot.GetComponent<Slot>().ClearSlot();
-            Instantiate(Resources.Load<GameObject>("CombineItems/" + gift));       
+            mouth.gameObject.GetComponent<Animator>().SetTrigger("Clicked");
+            Instantiate(Resources.Load<GameObject>("CombineItems/" + gift));
         }
     }
+
 }

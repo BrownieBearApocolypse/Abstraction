@@ -8,6 +8,7 @@ public class ChangeView : MonoBehaviour, IInteractable
     private ObjectManager objectManager;
     //goes on box that changes the view
     public string ViewName;
+    public AudioClip changeYes;
 
     void Start()
     {
