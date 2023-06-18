@@ -10,14 +10,23 @@ public class ButtonManager : MonoBehaviour
     private ObjectManager objectManager;
     public GameObject[] changeview;
     public GameObject[] zoom;
+    public bool pauseBool = false;
 
 
     void Start()
     {
         currentDisplay = GameObject.Find("displayImage").GetComponent<DisplayImage>();
-        objectManager = GameObject.Find("script holder").GetComponent<ObjectManager>();        
+        objectManager = GameObject.Find("script holder").GetComponent<ObjectManager>();  
     }
-   
+
+    public void Update()
+    {
+        if (pauseBool == true)
+        {
+
+        }
+    }
+
     public void OnClickReturn()
     {
         this.gameObject.GetComponent<AudioSource>().Play();
@@ -53,7 +62,7 @@ public class ButtonManager : MonoBehaviour
             currentDisplay.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/MAIN");
             objectManager.ManageObject();
         }
-        
+        pauseBool = false;
     }
     
 }

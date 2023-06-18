@@ -9,36 +9,27 @@ public class ZoomInObject : MonoBehaviour, IInteractable
     public GameObject cameraNewPos;
     public string posName;
     public GameObject[] zoomIN;
-    private GameObject gameObjectToExclude;
+    public GameObject mainCamera;
 
-    public void Start()
+    void Start()
     {
-        gameObjectToExclude = GameObject.Find("zoomInRotate");
+        mainCamera = GameObject.Find("MAINCAM");
     }
-
     public void Interact(DisplayImage currentDisplay)
     {
-        foreach (GameObject obj in zoomIN)
+        for (int i = 0; i < zoomIN.Length; i++)
         {
-            if (obj.name != "zoomInRotate")
+            GameObject obj = zoomIN[i];
+            currentDisplay.CurrentState = DisplayImage.State.zoom;
+            foreach (var change in changeview)
             {
-                currentDisplay.CurrentState = DisplayImage.State.zoom;
-                foreach (var change in changeview)
-                {
-                    change.layer = 2;
-                }
-                if (cameraNewPos.name == posName)
-                {
-                    Camera.main.transform.position = cameraNewPos.transform.position;
-                }
-                foreach (var zooms in zoomIN)
-                {
-                    if (zooms == gameObjectToExclude)
-                        continue;
-                    zooms.layer = 2;
-                }
+                change.layer = 2;
             }
-
+            if (cameraNewPos.name == posName)
+            {                
+                mainCamera.transform.position = cameraNewPos.transform.position;
+                Debug.Log("FuckMe" + Camera.main.transform.position);
+            }
         }
     }
 
