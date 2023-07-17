@@ -20,8 +20,8 @@ public class Clock : MonoBehaviour, IInteractable
     public void Interact(DisplayImage currentDisplay)
     {
         Slot currentSlot = inventory.GetComponent<InventoryManager>().currentSelectedSlot.GetComponent<Slot>();
-        if (currentSlot != null && currentSlot.ItemProperty == Slot.Property.usable && currentDisplay.CurrentState == DisplayImage.State.zoom 
-            && inventory.GetComponent<InventoryManager>().currentSelectedSlot.transform.GetChild(0).GetComponent<Image>().sprite.name == ScrewDriver)
+        if (currentSlot != null && currentSlot.ItemProperty == Slot.Property.usable && 
+            inventory.GetComponent<InventoryManager>().currentSelectedSlot.transform.GetChild(0).GetComponent<Image>().sprite.name == ScrewDriver)
         {
             this.gameObject.GetComponent<AudioSource>().Play();
             currentSlot.ClearSlot();

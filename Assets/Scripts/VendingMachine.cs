@@ -21,15 +21,13 @@ public class VendingMachine : MonoBehaviour, IInteractable
     {
         
         Slot slot = inventory.GetComponent<InventoryManager>().currentSelectedSlot.GetComponent<Slot>();
-        if (currentDisplay.CurrentState == DisplayImage.State.zoom && slot.ItemProperty == Slot.Property.usable 
-            && inventory.GetComponent<InventoryManager>().currentSelectedSlot.transform.GetChild(0).GetComponent<Image>().sprite.name == money)
+        if (slot.ItemProperty == Slot.Property.usable && inventory.GetComponent<InventoryManager>().currentSelectedSlot.transform.GetChild(0).GetComponent<Image>().sprite.name
+            == money)
         {
-            Debug.Log("IGotHEre1");
             inventory.GetComponent<InventoryManager>().currentSelectedSlot.GetComponent<Slot>().ClearSlot();
             mouth.gameObject.GetComponent<Animator>().SetTrigger("Clicked");
             this.gameObject.GetComponent<AudioSource>().Play();
             Instantiate(Resources.Load<GameObject>("CombineItems/" + gift));
-            Debug.Log("IGotHEre2");
         }
     }
 

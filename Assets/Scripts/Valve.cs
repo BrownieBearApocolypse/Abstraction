@@ -21,6 +21,7 @@ public class Valve : MonoBehaviour, IInteractable
         manager.ValveIsCompleted = true;
         var shelf = GameObject.Find("shelf");
         Slot currentSlot = inventory.GetComponent<InventoryManager>().currentSelectedSlot.GetComponent<Slot>();
+        Debug.Log("Fuck");
         if (currentSlot.ItemProperty == Slot.Property.usable && inventory.GetComponent<InventoryManager>().currentSelectedSlot.transform.GetChild(0).GetComponent<Image>().sprite.name == valveHandle)
         {
             this.gameObject.GetComponent<AudioSource>().Play();
@@ -29,6 +30,7 @@ public class Valve : MonoBehaviour, IInteractable
             Destroy(gameObject, delay);
             Destroy(shelf, delay);
             Destroy(valvE, delay + 0.5f);
+            Debug.Log("me");
         }
 
         //REMINDER; TO TRICK PLAYER INTO MELTING CLOCK HAVE A SHEET OF PAPER THEY FIND WITH PERSISTANCE OF MEMORY ON IT ZOOMED IN ON THE MELTED CLOCK
